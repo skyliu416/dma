@@ -1,7 +1,7 @@
 <template>
   <div class="assessment">
     <div class="title">
-      <div style='width:30%'>数字化成熟度评估</div>
+      <div style="width: 30%">数字化成熟度评估</div>
       <div class="barslide">
         <div class="borderYellow fontWhite bar">战略与创新增长</div>
         <div class="bar">数字化客户体验</div>
@@ -12,11 +12,11 @@
     </div>
     <div class="question">
       <div class="q1">
-        <span>1. 是否拥有清晰的针对客户体验优化的数字化创新战略？</span>
+        <span>{{ q1.q }}</span>
         <el-slider
           v-model="value1"
           :step="1"
-          :marks="marks"
+          :marks="q1.a"
           :show-tooltip="false"
           :min="1"
           :max="5"
@@ -25,11 +25,11 @@
         </el-slider>
       </div>
       <div class="q1">
-        <span>1. 是否拥有清晰的针对客户体验优化的数字化创新战略？</span>
+        <span>{{ q2.q }}</span>
         <el-slider
           v-model="value2"
           :step="1"
-          :marks="marks"
+          :marks="q2.a"
           :show-tooltip="false"
           :min="1"
           :max="5"
@@ -38,11 +38,11 @@
         </el-slider>
       </div>
       <div class="q1">
-        <span>1. 是否拥有清晰的针对客户体验优化的数字化创新战略？</span>
+        <span>{{ q3.q }}</span>
         <el-slider
           v-model="value3"
           :step="1"
-          :marks="marks"
+          :marks="q3.a"
           :show-tooltip="false"
           :min="1"
           :max="5"
@@ -51,11 +51,11 @@
         </el-slider>
       </div>
       <div class="q1">
-        <span>1. 是否拥有清晰的针对客户体验优化的数字化创新战略？</span>
+        <span>{{ q4.q }}</span>
         <el-slider
           v-model="value4"
           :step="1"
-          :marks="marks"
+          :marks="q4.a"
           :show-tooltip="false"
           :min="1"
           :max="5"
@@ -64,11 +64,11 @@
         </el-slider>
       </div>
       <div class="q1">
-        <span>1. 是否拥有清晰的针对客户体验优化的数字化创新战略？</span>
+        <span>{{ q5.q }}</span>
         <el-slider
           v-model="value5"
           :step="1"
-          :marks="marks"
+          :marks="q5.a"
           :show-tooltip="false"
           :min="1"
           :max="5"
@@ -77,26 +77,37 @@
         </el-slider>
       </div>
     </div>
-    <div><el-button class="btn" @click='gotoNext()'>下一页</el-button></div>
-    <div class='footer'><eyfooter></eyfooter></div>
-    
+    <div><el-button class="btn" @click="gotoNext()">下一页</el-button></div>
+    <div class="footer"><eyfooter></eyfooter></div>
   </div>
 </template>
 
 <script>
-import eyfooter from './eyfooter.vue';
+import eyfooter from "./eyfooter.vue";
 export default {
   components: { eyfooter },
   name: "Assessment1",
   methods: {
-    gotoNext(){
-
-      let result = { 
-        points:[this.value1.toFixed(1),this.value2.toFixed(1),this.value3.toFixed(1),this.value4.toFixed(1),this.value5.toFixed(1)],
-        avg: ((this.value1+this.value2+this.value3+this.value4+this.value5) / 5).toFixed(1)
-      }
-      localStorage.setItem('q1', JSON.stringify(result))
-      this.$router.push('/assessment2')
+    gotoNext() {
+      let result = {
+        points: [
+          this.value1.toFixed(1),
+          this.value2.toFixed(1),
+          this.value3.toFixed(1),
+          this.value4.toFixed(1),
+          this.value5.toFixed(1),
+        ],
+        avg: (
+          (this.value1 +
+            this.value2 +
+            this.value3 +
+            this.value4 +
+            this.value5) /
+          5
+        ).toFixed(1),
+      };
+      localStorage.setItem("q1", JSON.stringify(result));
+      this.$router.push("/assessment2");
     },
     change(v) {
       let marks = document.getElementsByClassName("el-slider__marks-text");
@@ -159,32 +170,71 @@ export default {
   data() {
     return {
       page: 1,
-      marks: {
-        1: "1 起步阶段",
-        2: "2 正在发展",
-        3: "3 充分应用",
-        4: "4 比较先进",
-        5: "5 行业领先",
-      },
+      marks: {},
       value1: 1,
       value2: 1,
       value3: 1,
       value4: 1,
       value5: 1,
+      q1: {
+        q: "1. 是否拥有清晰的创新增长战略，并已在高管团队内部达成共识？",
+        a: {
+          1: "1 起步阶段",
+          2: "2 正在发展",
+          3: "3 达到标准",
+          4: "4 比较先进",
+          5: "5 行业领先",
+        },
+      },
+      q2: {
+        q: "2. 是否拥有持续的工作流程去收集行业内外的创新趋势与洞察？",
+        a: {
+          1: "1 起步阶段",
+          2: "2 正在发展",
+          3: "3 达到标准",
+          4: "4 比较先进",
+          5: "5 行业领先",
+        },
+      },
+      q3: {
+        q: "3. 是否拥有专业技能完善的创新战略领导团队和项目团队？",
+        a: {
+          1: "1 起步阶段",
+          2: "2 正在发展",
+          3: "3 达到标准",
+          4: "4 比较先进",
+          5: "5 行业领先",
+        },
+      },
+      q4: {
+        q: "4. 是否已经在战略层面应用新经济/数字经济的创新商业模型？",
+        a: {
+          1: "1 起步阶段",
+          2: "2 逐步了解",
+          3: "3 充分应用",
+          4: "4 比较先进",
+          5: "5 行业领先",
+        },
+      },
+      q5: {
+        q: "5. 是否已经通过战略联盟/投融资/兼并购打造自己的创新生态圈？",
+        a: {
+          1: "1 起步阶段",
+          2: "2 正在发展",
+          3: "3 达到标准",
+          4: "4 比较先进",
+          5: "5 行业领先",
+        },
+      },
     };
   },
-
 };
 </script>
 
 <style scoped>
-
-
-
-
 .barslide {
   display: inline-flex;
-width: 70%;
+  width: 70%;
   justify-content: flex-end;
 }
 
@@ -193,7 +243,7 @@ width: 70%;
   margin-top: 24px;
   margin-right: 3px;
   color: #2b2b39;
-  
+
   height: 50%;
   width: 175px;
   font-size: 12px;
@@ -213,7 +263,6 @@ width: 70%;
   margin-top: 3%;
   width: 100%;
 }
-
 </style>
 
 <style >
@@ -236,7 +285,6 @@ el-button:focus,
   width: fit-content;
 }
 
-
 .assessment {
   background: url(../../src/assets/opacity.png);
   background-repeat: no-repeat;
@@ -249,6 +297,5 @@ el-button:focus,
   flex-direction: column;
   width: 90%;
   align-items: center;
-  
 }
 </style>

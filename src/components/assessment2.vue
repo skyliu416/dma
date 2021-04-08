@@ -10,13 +10,13 @@
         <div class="bar">组织架构与人才</div>
       </div>
     </div>
-    <div class="question">
+     <div class="question">
       <div class="q1">
-        <span>1. 是否拥有清晰的针对客户体验优化的数字化创新战略？</span>
+        <span>{{q1.q}}</span>
         <el-slider
           v-model="value1"
           :step="1"
-          :marks="marks"
+          :marks='q1.a'
           :show-tooltip="false"
           :min="1"
           :max="5"
@@ -25,11 +25,11 @@
         </el-slider>
       </div>
       <div class="q1">
-        <span>1. 是否拥有清晰的针对客户体验优化的数字化创新战略？</span>
+        <span>{{q2.q}}</span>
         <el-slider
           v-model="value2"
           :step="1"
-          :marks="marks"
+          :marks="q2.a"
           :show-tooltip="false"
           :min="1"
           :max="5"
@@ -38,11 +38,11 @@
         </el-slider>
       </div>
       <div class="q1">
-        <span>1. 是否拥有清晰的针对客户体验优化的数字化创新战略？</span>
+        <span>{{q3.q}}</span>
         <el-slider
           v-model="value3"
           :step="1"
-          :marks="marks"
+          :marks="q3.a"
           :show-tooltip="false"
           :min="1"
           :max="5"
@@ -51,11 +51,11 @@
         </el-slider>
       </div>
       <div class="q1">
-        <span>1. 是否拥有清晰的针对客户体验优化的数字化创新战略？</span>
+        <span>{{q4.q}}</span>
         <el-slider
           v-model="value4"
           :step="1"
-          :marks="marks"
+          :marks="q4.a"
           :show-tooltip="false"
           :min="1"
           :max="5"
@@ -64,11 +64,11 @@
         </el-slider>
       </div>
       <div class="q1">
-        <span>1. 是否拥有清晰的针对客户体验优化的数字化创新战略？</span>
+        <span>{{q5.q}}</span>
         <el-slider
           v-model="value5"
           :step="1"
-          :marks="marks"
+          :marks="q5.a"
           :show-tooltip="false"
           :min="1"
           :max="5"
@@ -169,6 +169,56 @@ export default {
       value3: 1,
       value4: 1,
       value5: 1,
+      q1: {
+        q: "1. 是否拥有清晰的针对客户体验优化的数字化创新战略？",
+        a: {
+          1: "1 起步阶段",
+          2: "2 正在发展",
+          3: "3 达到标准",
+          4: "4 比较先进",
+          5: "5 行业领先",
+        },
+      },
+      q2: {
+        q: "2. 是否充分熟悉行业内外针对客户体验优化的数字化创新的最佳实践案例？",
+        a: {
+          1: "1 起步阶段",
+          2: "2 正在发展",
+          3: "3 充分熟悉",
+          4: "4 比较先进",
+          5: "5 行业领先",
+        },
+      },
+      q3: {
+        q: "3. 是否拥有成熟的数字化+业务团队负责领导和执行客户体验优化的创新项目？",
+        a: {
+          1: "1 起步阶段",
+          2: "2 正在发展",
+          3: "3 达到标准",
+          4: "4 比较先进",
+          5: "5 行业领先",
+        },
+      },
+      q4: {
+        q: "4. 是否了解且已经将新兴技术应用在客户体验优化方面的创新项目（如CRM/SCRM）？",
+        a: {
+          1: "1 起步阶段",
+          2: "2 逐步了解",
+          3: "3 充分熟悉",
+          4: "4 比较先进",
+          5: "5 行业领先",
+        },
+      },
+      q5: {
+        q: "5. 是否在客户体验优化方面的创新规划中，有成熟的生态合作伙伴？",
+        a: {
+          1: "1 起步阶段",
+          2: "2 正在发展",
+          3: "3 达到标准",
+          4: "4 比较先进",
+          5: "5 行业领先",
+        },
+      },
     };
   },
 

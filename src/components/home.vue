@@ -113,7 +113,7 @@ export default {
 .btn:focus {
   margin-top: 2%;
   color: black;
-  width: 8%;
+  width: 10%;
   background-color: #ffe600;
   border-color: #ffe600;
   font-weight: 800;

@@ -16,6 +16,11 @@ export default new Router({
   routes: [
     {
       path: '/',
+      name: '',
+      component: Home
+    },
+    {
+      path: '/home',
       name: 'Home',
       component: Home
     },
@@ -60,5 +65,5 @@ export default new Router({
       component: End
     },
   ] ,
-  mode:'history'  
+  // mode:'history'  
 })
