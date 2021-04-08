@@ -1,0 +1,93 @@
+<template>
+  <div ref="end" class="home">
+    <div class='content'>
+ <div class="title">感谢您的参与</div>
+    <div class="subtitle">
+      本区域还有安永整理总结的行业数字化转型最佳实践，<br />欢迎前往房间浏览
+    </div>
+    </div>
+   
+    <div class='footer'><eyfooter></eyfooter></div>
+    
+  </div>
+</template>
+
+<script>
+import eyfooter from "./eyfooter.vue";
+export default {
+  name: "End",
+  data() {
+    return {};
+  },
+  methods: {
+
+  },
+  created() {
+    this.$nextTick(function () {
+      let end = this.$refs.end;
+
+      end.addEventListener("webkitAnimationEnd", () => {
+         this.$router.push('/')
+      });
+    });
+  },
+  components: { eyfooter },
+};
+</script>
+
+<style scoped>
+.home {
+  background: url(../../src/assets/opacity.png);
+  background-repeat: no-repeat;
+  background-size: auto 80%;
+  background-position: center center;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+
+.content{
+  height: 95%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+     opacity: 0;
+  -webkit-animation: textOpacity 5s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+  position: relative;
+}
+.wslogo {
+  width: 259px;
+  height: 48px;
+  margin: 0 auto;
+}
+.title {
+  /* margin-top: 20%; */
+  /* display: flex; */
+  flex-direction: column;
+  font-size: 48px;
+  color: white;
+  align-items: center;
+  -webkit-animation: display 2s;
+
+  animation-fill-mode: forwards;
+}
+.subtitle {
+  margin-top: 1%;
+  font-size: 24px;
+}
+
+@keyframes textOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+</style>
