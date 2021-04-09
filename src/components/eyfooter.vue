@@ -19,17 +19,16 @@ methods: {
 .eyfooter{
   width: 100%;
       height: 100%;
-
     bottom: 0;
     /* right: 5%; */
-
   display: flex;
   justify-content: flex-end;
   align-items: center;
+
 }
 
 .footerlogo{
-height: 50%;
-
+  display: flex;
+width: 11%;
 }
 </style>

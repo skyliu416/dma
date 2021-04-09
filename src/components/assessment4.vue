@@ -226,13 +226,9 @@ export default {
 </script>
 
 <style scoped>
-
-
-
-
 .barslide {
   display: inline-flex;
-width: 70%;
+  width: 65%;
   justify-content: flex-end;
 }
 
@@ -241,22 +237,13 @@ width: 70%;
   margin-top: 24px;
   margin-right: 3px;
   color: #2b2b39;
-  
+
   height: 50%;
   width: 175px;
   font-size: 12px;
   text-align: center;
 }
 
-.question {
-  margin: 5% 0 5% 0;
-  font-size: 16px;
-
-  width: 90%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 .q1 {
   margin-top: 3%;
   width: 100%;

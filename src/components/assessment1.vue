@@ -1,7 +1,7 @@
 <template>
   <div class="assessment">
     <div class="title">
-      <div style="width: 30%">数字化成熟度评估</div>
+      <div style="width:30%">数字化成熟度评估</div>
       <div class="barslide">
         <div class="borderYellow fontWhite bar">战略与创新增长</div>
         <div class="bar">数字化客户体验</div>
@@ -234,7 +234,7 @@ export default {
 <style scoped>
 .barslide {
   display: inline-flex;
-  width: 70%;
+  width: 65%;
   justify-content: flex-end;
 }
 
@@ -250,15 +250,6 @@ export default {
   text-align: center;
 }
 
-.question {
-  margin: 5% 0 5% 0;
-  font-size: 16px;
-
-  width: 90%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 .q1 {
   margin-top: 3%;
   width: 100%;

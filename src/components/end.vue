@@ -77,7 +77,7 @@ export default {
   animation-fill-mode: forwards;
 }
 .subtitle {
-  margin-top: 1%;
+  margin-top: 3%;
   font-size: 24px;
 }
 

@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from '../components/home'
 import Assessment1 from '../components/assessment1'
 import Assessment2 from '../components/assessment2'
 import Assessment3 from '../components/assessment3'
@@ -9,6 +8,8 @@ import Assessment5 from '../components/assessment5'
 import Result from '../components/result'
 import Intro from '../components/intro'
 import End from '../components/end'
+import ProgressBar from '../components/progressBar'
+import Home from '../components/home'
 
 Vue.use(Router)
 
@@ -17,7 +18,7 @@ export default new Router({
     {
       path: '/',
       name: '',
-      component: Home
+      component: ProgressBar
     },
     {
       path: '/home',
@@ -65,5 +66,5 @@ export default new Router({
       component: End
     },
   ] ,
-  // mode:'history'  
+  mode:'history'  
 })

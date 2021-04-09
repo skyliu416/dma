@@ -122,6 +122,7 @@ export default {
 
   width: 25%;
   font-size: 16px;
+    border-top: 2px solid #ffe600;
   position: relative;
   -webkit-animation: lastChange 1s;
   animation-fill-mode: forwards;
@@ -133,6 +134,7 @@ export default {
 
   width: 25%;
   font-size: 16px;
+    border-top: 2px solid #ffe600;
   position: relative;
   -webkit-animation: lastChange 1s;
   animation-fill-mode: forwards;

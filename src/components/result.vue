@@ -63,7 +63,7 @@
           <div class="mt2">联系邮箱</div>
           <input class=" " v-model="email" />
           <div>
-            <el-button class="btn" @click="submit()">提交</el-button>
+            <el-button class="btn" @click="submit()">提 交</el-button>
           </div>
         </div>
       </div>
@@ -380,7 +380,7 @@ export default {
 
 .ml10 {
   margin-left: 10px;
-  width: 60%;
+  width: 57%;
 }
 
 .mt2 {
@@ -396,7 +396,7 @@ export default {
 
 input {
   margin-top: 1%;
-  width: 89%;
+  width: 87%;
 }
 
 .btn,

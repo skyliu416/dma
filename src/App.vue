@@ -105,11 +105,12 @@ el-button:focus,
 }
 .title {
   display: flex;
-  font-size: 36px;
+  font-size: 32px;
   color: white;
   padding: 30px 30px 10px 30px;
   height: 50px;
-  width: 100%;
+  width: 95%;
+  justify-content: space-between;
 }
 .wslogo {
   width: 12%;
@@ -124,5 +125,20 @@ el-button:focus,
   width: 150px;
   background-color: #ffe600 !important;
   border-color: #ffe600 !important;
+  -webkit-appearance: none !important;
+}
+.el-slider__marks-text{
+  font-size: 12px  !important;
+}
+
+
+.question {
+  margin: 2% 0 5% 0;
+  font-size: 16px;
+
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 </style>
