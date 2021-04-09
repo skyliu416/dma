@@ -48,7 +48,7 @@
         </div>
       </div>
       <div class="contacts">
-        <div class="desc" style="margin-top: 20%">
+        <div class="desc" style="">
           填写联系信息，获取完整版数据解读
         </div>
         <div class="form" style="margin-top: 10%">
@@ -313,13 +313,16 @@ export default {
 .left {
   height: 100%;
   width: 68%;
+  margin-left: 5%;
 }
 .right {
   height: 100%;
   width: 32%;
   background-color: rgba(29, 29, 29, 0.6);
-
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 @keyframes opacity {
   from {
@@ -337,11 +340,16 @@ export default {
 
 .marks,
 .contacts {
-  margin-top: 70px;
+  /* margin-top: 70px; */
+ 
   color: white;
-  margin: 20% 5% 0 10%;
+  margin: 10% 5% 0 10%;
+}
+.contacts{
+  height: 40%;
 }
 .marks {
+   height: 25%;
   opacity: 0;
   -webkit-animation: opacity 1s;
   animation-delay: 1s;
@@ -367,7 +375,7 @@ export default {
   animation-fill-mode: forwards;
 }
 .f36 {
-  font-size: 36px;
+  font-size: 32px;
 }
 
 .f24 {

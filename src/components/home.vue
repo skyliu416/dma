@@ -1,25 +1,27 @@
 <template>
-<div class="home">
+  <div class="home">
     <div class="title">
-      <div style='width= 100%;'>数字化成熟度评估</div>
+      <div style="width= 100%;">数字化成熟度评估</div>
       <img class="wslogo" src="../../src/assets/wavespace.png" />
-      <div style='width= 100%;'> <el-button size='mini' class="btn" @click="gotoNext()"><span>确 定</span></el-button></div>
-     
+      <div style="display:flex; justify-content:center; width: 100%;">
+        <el-button size="mini" class="btn" @click="gotoNext()"
+          ><span class='textOpacity'>确 定</span></el-button
+        >
+      </div>
     </div>
-</div>
+  </div>
 </template>
 
 <script>
 export default {
   name: "Home",
 
-  methods:{
-    gotoNext(){
- this.$router.push('/intro')
-    }
+  methods: {
+    gotoNext() {
+      this.$router.push("/intro");
+    },
   },
-  created() {
-  },
+  created() {},
 };
 </script>
 
@@ -38,14 +40,14 @@ export default {
 .title {
   text-align: center;
   opacity: 0;
-margin-bottom: 5%;
-padding: 0;
-display: block;
+  margin-bottom: 5%;
+  padding: 0;
+  display: block;
   /* flex-direction: column; */
   font-size: 32px;
   color: white;
-      align-items: center;
-      -webkit-animation: display 3s;
+  align-items: center;
+  -webkit-animation: display 3s;
 
   animation-fill-mode: forwards;
 }
@@ -61,16 +63,15 @@ display: block;
 .btn:hover,
 .btn:active,
 .btn:focus {
-  /* margin-top: 1%; */
+  width: 10%;
+  margin-top: 1%;
   color: black;
-
   background-color: #ffe600;
   border-color: #ffe600;
-  /* font-weight: 800; */
+  font-weight: 800;
 }
-.textOpacity{
-
-opacity: 0;
+.textOpacity {
+  opacity: 0;
   -webkit-animation: textOpacity 3s infinite;
   animation-delay: 1s;
   animation-fill-mode: forwards;

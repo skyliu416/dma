@@ -88,7 +88,7 @@ background-color: #D1D1D2  ;
 }
 
 .el-slider__button {
-  border: 2px solid #ffe600 !important;
+  border: 2px solid yellow !important;
   background-color: #ffe600 !important;
 }
 el-button:focus,
@@ -101,19 +101,20 @@ el-button:focus,
       background-color: inherit !important;
 }
 .el-slider__runway{
-  box-shadow: 0px 0px 2px 2px #ffe600;
+  box-shadow: 0px 0px 2px 1px #ffe600;
+  background: grey !important;
 }
 .title {
   display: flex;
   font-size: 32px;
   color: white;
   padding: 30px 30px 10px 30px;
-  height: 50px;
+  height: 10%;
   width: 95%;
   justify-content: space-between;
 }
 .wslogo {
-  width: 12%;
+  width: 10%;
   /* height: 48px; */
   margin: 0 auto;
 }
@@ -121,8 +122,8 @@ el-button:focus,
 .btn:hover,
 .btn:active,
 .btn:focus {
-  color: black !important;
   width: 150px;
+  color: black !important;
   background-color: #ffe600 !important;
   border-color: #ffe600 !important;
   -webkit-appearance: none !important;
@@ -140,5 +141,19 @@ el-button:focus,
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.assessment {
+  background: url('../src/assets/opacity.png');
+  background-repeat: no-repeat;
+  background-size: auto 80%;
+  background-position: center center;
+  /* opacity: 50%; */
+
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  align-items: center;
+      justify-content: space-between;
 }
 </style>

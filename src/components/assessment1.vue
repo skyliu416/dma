@@ -275,18 +275,4 @@ el-button:focus,
 .el-slider__marks-text {
   width: fit-content;
 }
-
-.assessment {
-  background: url(../../src/assets/opacity.png);
-  background-repeat: no-repeat;
-  background-size: auto 80%;
-  background-position: center center;
-  /* opacity: 50%; */
-
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  width: 90%;
-  align-items: center;
-}
 </style>
