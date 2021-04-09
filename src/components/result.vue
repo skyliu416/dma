@@ -128,6 +128,7 @@ export default {
       this.company = "";
       this.email = "";
       this.contact = "";
+      localStorage.clear();
       this.$router.push("/end");
     },
     drawPie(id) {
