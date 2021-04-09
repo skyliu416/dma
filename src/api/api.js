@@ -1,7 +1,7 @@
 // import axios from 'axios';
 
 //let prefix = 'http://10.172.13.245:3002';
-let SERVER_PREFIX = 'http://localhost:3000/';
+let SERVER_PREFIX = 'http://localhost:8000/';
 
 // let prefix = process.env.prefix;
 // let SERVER_PREFIX = process.env.SERVER_PREFIX;
