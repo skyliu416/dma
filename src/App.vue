@@ -21,6 +21,7 @@ body {
   padding: 0;
   background-color: rgba(0, 0, 0, 1);
   background-position: center center;
+  overflow-x: hidden;
 }
 
 #app {
@@ -43,6 +44,28 @@ body {
 body {
   margin: 0;
   padding: 0;
+}
+
+.page {
+  background: url(../src/assets/opacity.png);
+  background-repeat: no-repeat;
+  background-size: auto 80%;
+  background-position: center center;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+      align-items: center;
+}
+
+.content{
+  display: flex;
+  height: 95%;
+  width: 100%;
+    align-items: center;
+  justify-content: center;
+}
+.flexColumn{
+  flex-direction: column;
 }
 
 .footer{

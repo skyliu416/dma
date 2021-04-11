@@ -29,6 +29,6 @@ methods: {
 
 .footerlogo{
   display: flex;
-width: 11%;
+width: 10%;
 }
 </style>

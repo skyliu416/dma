@@ -7,65 +7,71 @@
       <div id="radar"></div>
     </div>
     <div class="right">
-      <div class="marks" v-show="showResult.a">
-        <span class="f36 yellow">{{ avg }} /</span
-        ><span class="f24 yellow">5分</span>
-        <div>
-          数字化成熟度处于<span class="yellow">起步阶段</span
-          ><br />下一步数字化发展可对标的企业有:<br />......
-        </div>
-      </div>
-      <div class="marks" v-show="showResult.b">
-        <span class="f36 yellow">{{ avg }} /</span
-        ><span class="f24 yellow">5分</span>
-        <div>
-          数字化成熟度处于<span class="yellow">发展阶段</span
-          ><br />下一步数字化发展可对标的企业有:<br />......
-        </div>
-      </div>
-      <div class="marks" v-show="showResult.c">
-        <span class="f36 yellow">{{ avg }} /</span
-        ><span class="f24 yellow">5分</span>
-        <div>
-          数字化成熟度达到<span class="yellow">行业平均水平</span
-          ><br />下一步数字化发展可对标的企业有:<br />......
-        </div>
-      </div>
-      <div class="marks" v-show="showResult.d">
-        <span class="f36 yellow">{{ avg }} /</span
-        ><span class="f24 yellow">5分</span>
-        <div>
-          数字化成熟度接近<span class="yellow">行业领先水平</span
-          ><br />下一步数字化发展可对标的企业有:<br />......
-        </div>
-      </div>
-      <div class="marks" v-show="showResult.e">
-        <span class="f36 yellow">{{ avg }} /</span
-        ><span class="f24 yellow">5分</span>
-        <div>
-          数字化成熟度达到<span class="yellow">行业领先水平</span
-          ><br />下一步数字化发展可对标的企业有:<br />......
-        </div>
-      </div>
-      <div class="contacts">
-        <div class="desc" style="">
-          填写联系信息，获取完整版数据解读
-        </div>
-        <div class="form" style="margin-top: 10%">
-          <span class="inline-block wid30">姓名</span
-          ><span class="ml10">组织/企业名称</span>
-          <div style="display: flex">
-            <input class="wid30" v-model="name" />
-            <input class="ml10" v-model="company" />
+      <div class="content flexColumn">
+        <div class="" style='width:80% '>
+          <div class="marks" v-show="showResult.a">
+            <span class="f36 yellow">{{ avg }}分 /</span
+            ><span class="f24 yellow">5分</span>
+            <div>
+              数字化成熟度处于<span class="yellow">起步阶段</span
+              ><br />下一步数字化发展可对标的企业有:<br />......
+            </div>
           </div>
-          <div class="mt2">联系方式 (手机/微信）</div>
-          <input class=" " v-model="contact" />
-          <div class="mt2">联系邮箱</div>
-          <input class=" " v-model="email" />
-          <div>
-            <el-button class="btn" @click="submit()">提 交</el-button>
+          <div class="marks" v-show="showResult.b">
+            <span class="f36 yellow">{{ avg }} /</span
+            ><span class="f24 yellow">5分</span>
+            <div>
+              数字化成熟度处于<span class="yellow">发展阶段</span
+              ><br />下一步数字化发展可对标的企业有:<br />......
+            </div>
+          </div>
+          <div class="marks" v-show="showResult.c">
+            <span class="f36 yellow">{{ avg }} /</span
+            ><span class="f24 yellow">5分</span>
+            <div>
+              数字化成熟度达到<span class="yellow">行业平均水平</span
+              ><br />下一步数字化发展可对标的企业有:<br />......
+            </div>
+          </div>
+          <div class="marks" v-show="showResult.d">
+            <span class="f36 yellow">{{ avg }} /</span
+            ><span class="f24 yellow">5分</span>
+            <div>
+              数字化成熟度接近<span class="yellow">行业领先水平</span
+              ><br />下一步数字化发展可对标的企业有:<br />......
+            </div>
+          </div>
+          <div class="marks" v-show="showResult.e">
+            <span class="f36 yellow">{{ avg }} /</span
+            ><span class="f24 yellow">5分</span>
+            <div>
+              数字化成熟度达到<span class="yellow">行业领先水平</span
+              ><br />下一步数字化发展可对标的企业有:<br />......
+            </div>
+          </div>
+          <div class="contacts">
+            <div class="desc" style="">填写联系信息，获取完整版数据解读</div>
+            <div class="form" style="margin-top: 10%">
+              <span class="inline-block wid30">姓名</span
+              ><span class="ml10">组织/企业名称</span>
+              <div style="display: flex">
+                <input class="wid30" v-model="name" />
+                <input class="ml10" v-model="company" />
+              </div>
+              <div class="mt2">联系方式 (手机/微信）</div>
+              <input class=" " v-model="contact" />
+              <div class="mt2">联系邮箱</div>
+              <input class=" " v-model="email" />
+              <div>
+                <el-button class="btn" @click="submit()">提 交</el-button>
+              </div>
+            </div>
           </div>
         </div>
+        
+      </div>
+      <div class='footer'>
+         <img class="footerlogo" src="../../src/assets/wavespace.png" />
       </div>
     </div>
   </div>
@@ -114,15 +120,14 @@ export default {
         q5: JSON.parse(localStorage.getItem("q5")),
       };
       let result = {
-        "eventID": 1,
-        'name': this.name,
-        'company': this.company,
-        'email': this.email,
-        'contact': this.contact,
-        'assessment': JSON.stringify(assessment)
+        eventID: 1,
+        name: this.name,
+        company: this.company,
+        email: this.email,
+        contact: this.contact,
+        assessment: JSON.stringify(assessment),
       };
 
-      
       await this.$api.submit(result);
       this.name = "";
       this.company = "";
@@ -137,7 +142,7 @@ export default {
       let avg3 = parseFloat(JSON.parse(localStorage.getItem("q3")).avg);
       let avg4 = parseFloat(JSON.parse(localStorage.getItem("q4")).avg);
       let avg5 = parseFloat(JSON.parse(localStorage.getItem("q5")).avg);
-      
+
       this.avg = ((avg1 + avg2 + avg3 + avg4 + avg5) / 5).toFixed(1);
       if (1 <= this.avg <= 1.4) {
         this.showResult.a = true;
@@ -164,7 +169,7 @@ export default {
           center: ["50%", "50%"],
           radius: "70%",
           startAngle: 90,
-          splitNumber: 4,
+          splitNumber: 5,
           // shape: "circle",
           splitArea: {
             areaStyle: {
@@ -172,7 +177,7 @@ export default {
             },
           },
           axisLabel: {
-            show: false,
+            show: true,
             fontSize: 20,
             color: "#000",
             fontStyle: "normal",
@@ -187,6 +192,7 @@ export default {
           splitLine: {
             show: true,
             lineStyle: {
+              type:'dashed',
               color: "grey",
               width: 1,
             },
@@ -228,38 +234,40 @@ export default {
             name: "",
             type: "radar",
             symbol: "circle",
-            symbolSize: 9,
+            symbolSize: 20,
             areaStyle: {
+           
               normal: {
-                color: new echarts.graphic.LinearGradient(
-                  0,
-                  0,
-                  0,
-                  1,
-                  [
-                    {
-                      offset: 0,
-                      color: "#ffe600",
-                    },
-                    {
-                      offset: 0.5,
-                      color: "rgba(0,0,0,0.8)",
-                    },
-                    {
-                      offset: 1,
-                      color: "#ffe600",
-                    },
-                    // {
-                    //   offset: 0,
-                    //   color: "grey",
-                    // },
-                    // {
-                    //   offset: 1,
-                    //   color: "#ffe600",
-                    // },
-                  ],
-                  false
-                ),
+                   color:'rgba(255,255,255,0.6)',
+                // color: new echarts.graphic.LinearGradient(
+                //   0,
+                //   0,
+                //   0,
+                //   1,
+                //   [
+                //     {
+                //       offset: 2,
+                //       color: "#ffe600",
+                //     },
+                //     {
+                //       offset: 0.5,
+                //       color: "rgba(0,0,0,0.8)",
+                //     },
+                //     {
+                //       offset: 1,
+                //       color: "#ffe600",
+                //     },
+                //     // {
+                //     //   offset: 0,
+                //     //   color: "grey",
+                //     // },
+                //     // {
+                //     //   offset: 1,
+                //     //   color: "#ffe600",
+                //     // },
+                //   ],
+                //   false
+                // ),
               },
             },
             itemStyle: {
@@ -270,7 +278,7 @@ export default {
             },
             lineStyle: {
               normal: {
-                color: "#ffe600",
+                color: "white",
                 width: 1,
               },
             },
@@ -278,12 +286,12 @@ export default {
               {
                 value: [avg1, avg2, avg3, avg4, avg5],
                 label: {
-                  fontSize:'12',
-                  show:true,
-                 formatter: function(params) {
-                     return params.value.toFixed(1);
-                 },
-                 color: 'white',
+                  fontSize: "12",
+                  show: true,
+                  formatter: function (params) {
+                    return params.value.toFixed(1);
+                  },
+                  color: "white",
                 },
                 //  lineStyle: {
                 //         type: 'dashed'
@@ -313,17 +321,16 @@ export default {
 
 .left {
   height: 100%;
-  width: 68%;
+  width: 70%;
   margin-left: 5%;
 }
 .right {
   height: 100%;
-  width: 32%;
-  background-color: rgba(29, 29, 29, 0.6);
+  width: 30%;
+  background-color: rgba(255,255,255,0.13);
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
 @keyframes opacity {
   from {
@@ -334,23 +341,21 @@ export default {
   }
 }
 #radar {
-  height: 90%;
-  width: 90%;
+  height: 80%;
+  width: 80%;
   margin: 10px;
 }
 
 .marks,
 .contacts {
-  /* margin-top: 70px; */
- 
   color: white;
-  margin: 10% 5% 0 10%;
+  margin: 12% 0 0 0;
 }
-.contacts{
+.contacts {
   height: 40%;
 }
 .marks {
-   height: 25%;
+  height: 25%;
   opacity: 0;
   -webkit-animation: opacity 1s;
   animation-delay: 1s;
@@ -377,6 +382,7 @@ export default {
 }
 .f36 {
   font-size: 32px;
+  font-weight: bold;
 }
 
 .f24 {
@@ -389,14 +395,13 @@ export default {
 
 .ml10 {
   margin-left: 10px;
-  width: 57%;
 }
 
 .mt2 {
   margin-top: 2%;
 }
 .wid30 {
-  width: 25%;
+  width: 40%;
 }
 
 .inline-block {
@@ -405,7 +410,7 @@ export default {
 
 input {
   margin-top: 1%;
-  width: 87%;
+      width: -webkit-fill-available;
 }
 
 .btn,
@@ -414,8 +419,22 @@ input {
 .btn:focus {
   margin-top: 10%;
   color: black;
-  width: 90%;
   background-color: #ffe600;
   border-color: #ffe600;
+}
+
+.footer{
+width: 90%;
+    bottom: 0;
+    margin-right: 5%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 5%;
+
+}
+.footerlogo{
+  display: flex;
+width: 30%;
 }
 </style>

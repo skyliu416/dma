@@ -1,107 +1,115 @@
 <template>
-  <div class="intro">
-    <div class="block">
-      <div class="heading1">
-        5大创新聚焦方向
-        <el-divider class="bgYellow height2 heading1Animation"></el-divider>
-      </div>
-
-      <div class="list">
-        <div class="barlist">
-          <el-divider class="bgLightYellow height16 headingBar"></el-divider>
-          <div class="headingText">战略与创新增长</div>
-        </div>
-        <div class="barlist">
-          <el-divider class="bgYellow height16 headingBar"></el-divider>
-          <div class="headingText">战略与创新增长</div>
-        </div>
-        <div class="barlist">
-          <el-divider class="bgLightYellow height16 headingBar"></el-divider>
-          <div class="headingText">战略与创新增长</div>
-        </div>
-        <div class="barlist">
-          <el-divider class="bgYellow height16 headingBar"></el-divider>
-          <div class="headingText">战略与创新增长</div>
-        </div>
-        <div class="barlist">
-          <el-divider class="bgLightYellow height16 headingBar"></el-divider>
-          <div class="headingText">战略与创新增长</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="block">
-      <div class="heading2">
-        5项创新驱动力
-        <el-divider class="bgYellow height2 heading2Animation"></el-divider>
-      </div>
-      <div class="list">
-        <div class="barlist headingIcon">
-          <img class="icon" src="../../src/assets/icon3.png" /><br />清晰规划
-        </div>
-        <div class="barlist headingIcon">
-          <img class="icon" src="../../src/assets/icon4.png" /><br />市场洞察
+  <div class="page">
+    <div class="content flexColumn">
+      <div class="block">
+        <div class="heading1">
+          5大创新聚焦方向
+          <el-divider class="bgYellow height2 heading1Animation"></el-divider>
         </div>
 
-        <div class="barlist headingIcon">
-          <img class="icon" src="../../src/assets/icon2.png" /><br />转型管理
-        </div>
-        <div class="barlist headingIcon">
-          <img class="icon" src="../../src/assets/icon5.png" /><br />前沿科技
-        </div>
-        <div class="barlist headingIcon">
-          <img class="icon" src="../../src/assets/icon1.png" /><br />生态联盟
-        </div>
-      </div>
-    </div>
-    <div class="block">
-      <div class="heading3">
-        5层创新发展阶段
-        <el-divider class="bgYellow height2 heading3Animation"></el-divider>
-      </div>
-      <div class="list">
-        <div class='frame'>
-<div class="lastline1">
-          <div class="circle1"></div>
-          <div class="lastTxt1">起步阶段</div>
-        </div>
-        </div>
-        <div class='frame'>
-        <div class="lastline2">
-          <div class="circle2"></div>
-          <div class="lastTxt2">发展阶段</div>
-        </div>
-        </div>
-        <div class='frame'>
-        <div class="lastline3">
-          <div class="circle3"></div>
-          <div class="lastTxt3">行业平均水平</div>
-        </div>
-        </div>
-        <div class='frame'>
-        <div class="lastline4">
-          <div class="circle4"></div>
-          <div class="lastTxt4">接近行业领先</div>
-        </div>
-        </div>
-        <div class=''>
-        <div class="lastline5">
-          <div class="lastTxt5">行业领先</div>
-          <div class="circle5"></div>
-        </div>
+        <div class="list">
+          <div class="barlist">
+            <el-divider class="bgLightYellow height16 headingBar"></el-divider>
+            <div class="headingText">战略与创新增长</div>
+          </div>
+          <div class="barlist">
+            <el-divider class="bgYellow height16 headingBar"></el-divider>
+            <div class="headingText">战略与创新增长</div>
+          </div>
+          <div class="barlist">
+            <el-divider class="bgLightYellow height16 headingBar"></el-divider>
+            <div class="headingText">战略与创新增长</div>
+          </div>
+          <div class="barlist">
+            <el-divider class="bgYellow height16 headingBar"></el-divider>
+            <div class="headingText">战略与创新增长</div>
+          </div>
+          <div class="barlist">
+            <el-divider class="bgLightYellow height16 headingBar"></el-divider>
+            <div class="headingText">战略与创新增长</div>
+          </div>
         </div>
       </div>
+
+      <div class="block">
+        <div class="heading2">
+          5项创新驱动力
+          <el-divider class="bgYellow height2 heading2Animation"></el-divider>
+        </div>
+        <div class="list">
+          <div class="barlist headingIcon">
+            <img class="icon" src="../../src/assets/icon3.png" /><br />清晰规划
+          </div>
+          <div class="barlist headingIcon">
+            <img class="icon" src="../../src/assets/icon4.png" /><br />市场洞察
+          </div>
+
+          <div class="barlist headingIcon">
+            <img class="icon" src="../../src/assets/icon2.png" /><br />转型管理
+          </div>
+          <div class="barlist headingIcon">
+            <img class="icon" src="../../src/assets/icon5.png" /><br />前沿科技
+          </div>
+          <div class="barlist headingIcon">
+            <img class="icon" src="../../src/assets/icon1.png" /><br />生态联盟
+          </div>
+        </div>
+      </div>
+      <div class="block">
+        <div class="heading3">
+          5层创新发展阶段
+          <el-divider class="bgYellow height2 heading3Animation"></el-divider>
+        </div>
+        <div class="list">
+          <div class="frame">
+            <div class="lastline1">
+              <div class="circle1"></div>
+              <div class="lastTxt1">起步阶段</div>
+            </div>
+          </div>
+          <div class="frame">
+            <div class="lastline2">
+              <div class="circle2"></div>
+              <div class="lastTxt2">发展阶段</div>
+            </div>
+          </div>
+          <div class="frame">
+            <div class="lastline3">
+              <div class="circle3"></div>
+              <div class="lastTxt3">行业平均水平</div>
+            </div>
+          </div>
+          <div class="frame">
+            <div class="lastline4">
+              <div class="circle4"></div>
+              <div class="lastTxt4">接近行业领先</div>
+            </div>
+          </div>
+          <div class="">
+            <div class="lastline5">
+              <div class="lastTxt5">行业领先</div>
+              <div class="circle5"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="btnBlock">
+        <el-button class="btn" @click="gotoAssessment()"
+          ><span class="textOpacity">进入评估</span></el-button
+        >
+      </div>
     </div>
-    <div class='btnBlock'>
-       <el-button class="btn" @click='gotoAssessment()'><span class='textOpacity'>进入评估</span></el-button>
+  <div class="footer">
+      <eyfooter />
     </div>
-   
   </div>
 </template>
 
 <script>
+import eyfooter from "./eyfooter.vue";
 export default {
   name: "Intro",
+    components: { eyfooter },
   data() {
     return {
       value1: 0,
@@ -109,9 +117,9 @@ export default {
     };
   },
   methods: {
-    gotoAssessment(){
-      this.$router.push('/assessment1')
-    }
+    gotoAssessment() {
+      this.$router.push("/assessment1");
+    },
   },
 };
 </script>
@@ -122,7 +130,7 @@ export default {
 
   width: 25%;
   font-size: 16px;
-    border-top: 2px solid #ffe600;
+  border-top: 2px solid #ffe600;
   position: relative;
   -webkit-animation: lastChange 1s;
   animation-fill-mode: forwards;
@@ -134,11 +142,11 @@ export default {
 
   width: 25%;
   font-size: 16px;
-    border-top: 2px solid #ffe600;
+  border-top: 2px solid #ffe600;
   position: relative;
   -webkit-animation: lastChange 1s;
   animation-fill-mode: forwards;
-  animation-delay:5s;
+  animation-delay: 5s;
 }
 
 .lastline3 {
@@ -165,7 +173,7 @@ export default {
 }
 .lastline5 {
   opacity: 0;
- 
+
   width: 0;
   font-size: 16px;
   border-top: 2px solid #ffe600;
@@ -372,7 +380,7 @@ export default {
   animation-fill-mode: forwards;
 }
 
-.frame{
+.frame {
   height: 10px;
   width: 25%;
 }
@@ -453,7 +461,7 @@ export default {
   0% {
     opacity: 0;
   }
- 
+
   33% {
     opacity: 1;
   }
@@ -463,26 +471,6 @@ export default {
   100% {
     opacity: 1;
   }
-}
-
-
-.intro {
-  /* display: flex;
-  flex-direction: column;
-  width: 100%;
-  justify-content: space-evenly;
-  align-items: center; */
-
- background: url(../../src/assets/opacity.png);
-  background-repeat: no-repeat;
-  background-size: 90% auto;
-  background-position: center center;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  width: 100%;
-  justify-content: space-evenly;
 }
 
 .block {
@@ -547,20 +535,19 @@ export default {
   border-color: #ffe600;
 }
 
-.btnBlock{
+.btnBlock {
   display: flex;
-    align-items: center;
+  align-items: center;
   height: 18%;
 }
-.btn{
-  -webkit-animation: opacity  1s;
+.btn {
+  -webkit-animation: opacity 1s;
   animation-delay: 8.5s;
   animation-fill-mode: forwards;
 }
 
-.textOpacity{
-
-opacity: 0;
+.textOpacity {
+  opacity: 0;
   -webkit-animation: textOpacity ease-in-out 2s;
   animation-delay: 9s;
   animation-fill-mode: forwards;

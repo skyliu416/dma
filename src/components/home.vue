@@ -1,19 +1,27 @@
 <template>
-  <div class="home">
-    <div class="title">
-      <div style="width= 100%;">数字化成熟度评估</div>
-      <img class="wslogo" src="../../src/assets/wavespace.png" />
-      <div style="display:flex; justify-content:center; width: 100%;">
-        <el-button size="mini" class="btn" @click="gotoNext()"
-          ><span class='textOpacity'>确 定</span></el-button
-        >
+  <div class="page">
+    <div class="content">
+      <div class="title">
+        <div style="width= 100%;">数字化成熟度评估</div>
+        <img class="wslogo" src="../../src/assets/wavespace.png" />
+        <div style="display: flex; justify-content: center; width: 100%">
+          <el-button size="mini" class="btn" @click="gotoNext()"
+            ><span class="textOpacity">确 定</span></el-button
+          >
+        </div>
       </div>
+    </div>
+    <div class="footer">
+      <eyfooter />
     </div>
   </div>
 </template>
 
 <script>
+import eyfooter from "./eyfooter.vue";
+
 export default {
+  components: { eyfooter },
   name: "Home",
 
   methods: {
@@ -26,17 +34,6 @@ export default {
 </script>
 
 <style scoped>
-.home {
-  background: url(../../src/assets/opacity.png);
-  background-repeat: no-repeat;
-  background-size: auto 80%;
-  background-position: center center;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  align-items: center;
-  justify-content: center;
-}
 .title {
   text-align: center;
   opacity: 0;
