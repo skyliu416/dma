@@ -11,6 +11,7 @@ import End from '../components/dma/end'
 import ProgressBar from '../components/dma/progressBar'
 import Home from '../components/dma/home'
 
+import TalentHome from '../components/talent/home'
 Vue.use(Router)
 
 export default new Router({
@@ -64,6 +65,11 @@ export default new Router({
       path: '/dma/end',
       name: 'End',
       component: End
+    },
+    {
+      path: '/talent/home',
+      name: 'TalentHome',
+      component: TalentHome
     },
   ] ,
   mode:'history'  

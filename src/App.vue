@@ -19,7 +19,7 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  background-color: rgba(0, 0, 0, 1);
+  
   background-position: center center;
   overflow-x: hidden;
 }
@@ -28,17 +28,11 @@ body {
   font-family: "PingFang SC";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  
-
-  display: flex;
-  height: 100%;
+  display: block;
   width: 100%;
+  height: 100%;
   justify-content: center;
-
-  
   color: white;
-
-
 }
 
 body {
@@ -46,21 +40,24 @@ body {
   padding: 0;
 }
 
-.page {
+.dma {
+  
+  background-color: rgba(0, 0, 0, 1);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+      align-items: center;
+}
+
+.content{
   background: url('../src/assets/opacity.png');
   background-repeat: no-repeat;
   background-size: auto 80%;
   background-position: center center;
   display: flex;
-  flex-direction: column;
-  width: 90%;
-      align-items: center;
-}
-
-.content{
-  display: flex;
   height: 95%;
-  width: 100%;
+  width: 90%;
     align-items: center;
   justify-content: center;
 }
@@ -71,7 +68,7 @@ body {
 .footer{
   display: flex;
     /* position: fixed; */
-    width: 100%;
+    width: 90%;
     height: 6%;
     margin-bottom: 1%;
 }

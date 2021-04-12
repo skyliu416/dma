@@ -1,5 +1,5 @@
 <template>
-  <div class="page">
+  <div class="dma">
     <div class="content flexColumn">
       <div class="block">
         <div class="heading1">

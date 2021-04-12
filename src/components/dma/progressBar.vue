@@ -1,5 +1,5 @@
 <template>
-  <div class="page">
+  <div class="dma">
     <div class="content">
       <div ref="progressBar" class="progress">
         <span>正在加载</span>

@@ -1,4 +1,5 @@
 <template>
+<div class='dma'>
   <div class="assessment">
     <div class="title">
       <div style='width:30%'>数字化成熟度评估</div>
@@ -80,6 +81,7 @@
     <el-button class="btn" @click='gotoNext()'>下一页</el-button>
      <div class='footer'><eyfooter></eyfooter></div>
   </div>
+</div>
 </template>
 
 <script>

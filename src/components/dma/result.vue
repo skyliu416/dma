@@ -1,4 +1,5 @@
 <template>
+<div class='dma'>
   <div class="result">
     <div class="left">
       <div class="title">
@@ -73,6 +74,7 @@
         <img class="footerlogo" src="/wavespace.png" />
       </div>
     </div>
+  </div>
   </div>
 </template>
 
@@ -328,6 +330,15 @@ export default {
 </script>
 
 <style scoped>
+.content{
+  background: none;
+  display: flex;
+  height: 95%;
+  width: 90%;
+    align-items: center;
+  justify-content: center;
+}
+
 .result {
   background: url(../../../src/assets/opacity.png);
   background-repeat: no-repeat;

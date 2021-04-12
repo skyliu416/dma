@@ -1,9 +1,11 @@
 <template>
-  <div ref="end" class="home">
+  <div  class="dma">
     <div class='content'>
+      <div class='end' ref="end">
  <div class="endtitle">感谢您的参与</div>
     <div class="subtitle">
       本区域还有安永整理总结的行业数字化转型最佳实践，<br />欢迎前往房间浏览
+    </div>
     </div>
     </div>
    
@@ -36,15 +38,6 @@ export default {
 </script>
 
 <style scoped>
-.home {
-  background: url(../../../src/assets/opacity.png);
-  background-repeat: no-repeat;
-  background-size: auto 80%;
-  background-position: center center;
-  display: flex;
-  flex-direction: column;
-  width: 90%;
-}
 
 .content{
   height: 95%;
@@ -54,6 +47,9 @@ export default {
     align-items: center;
     justify-content: center;
     text-align: center;
+
+}
+.end{
      opacity: 0;
   -webkit-animation: textOpacity 5s;
   animation-delay: 1s;

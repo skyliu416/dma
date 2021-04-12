@@ -1,5 +1,5 @@
 <template>
-  <div class="page">
+  <div class="dma">
     <div class="content">
       <div class="title">
         <div style="width= 100%;">数字化成熟度评估</div>
