@@ -16,52 +16,52 @@ Vue.use(Router)
 export default new Router({
   routes: [
     {
-      path: '/',
+      path: '/dma',
       name: '',
       component: ProgressBar
     },
     {
-      path: '/home',
+      path: '/dma/home',
       name: 'Home',
       component: Home
     },
     {
-      path: '/assessment1',
+      path: '/dma/assessment1',
       name: 'Assessment1',
       component: Assessment1
     },
     {
-      path: '/assessment2',
+      path: '/dma/assessment2',
       name: 'Assessment2',
       component: Assessment2
     },
     {
-      path: '/assessment3',
+      path: '/dma/assessment3',
       name: 'Assessment3',
       component: Assessment3
     },
     {
-      path: '/assessment4',
+      path: '/dma/assessment4',
       name: 'Assessment4',
       component: Assessment4
     },
     {
-      path: '/assessment5',
+      path: '/dma/assessment5',
       name: 'Assessment5',
       component: Assessment5
     },
     {
-      path: '/result',
+      path: '/dma/result',
       name: 'Result',
       component: Result
     },
     {
-      path: '/intro',
+      path: '/dma/intro',
       name: 'Intro',
       component: Intro
     },
     {
-      path: '/end',
+      path: '/dma/end',
       name: 'End',
       component: End
     },

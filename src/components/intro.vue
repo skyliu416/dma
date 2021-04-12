@@ -38,20 +38,20 @@
         </div>
         <div class="list">
           <div class="barlist headingIcon">
-            <img class="icon" src="../../src/assets/icon3.png" /><br />清晰规划
+            <img class="icon" src="@/assets/icon3.png" /><br />清晰规划
           </div>
           <div class="barlist headingIcon">
-            <img class="icon" src="../../src/assets/icon4.png" /><br />市场洞察
+            <img class="icon" src="@/assets/icon4.png" /><br />市场洞察
           </div>
 
           <div class="barlist headingIcon">
-            <img class="icon" src="../../src/assets/icon2.png" /><br />转型管理
+            <img class="icon" src="@/assets/icon2.png" /><br />转型管理
           </div>
           <div class="barlist headingIcon">
-            <img class="icon" src="../../src/assets/icon5.png" /><br />前沿科技
+            <img class="icon" src="@/assets/icon5.png" /><br />前沿科技
           </div>
           <div class="barlist headingIcon">
-            <img class="icon" src="../../src/assets/icon1.png" /><br />生态联盟
+            <img class="icon" src="@/assets/icon1.png" /><br />生态联盟
           </div>
         </div>
       </div>
@@ -118,7 +118,7 @@ export default {
   },
   methods: {
     gotoAssessment() {
-      this.$router.push("/assessment1");
+      this.$router.push("/dma/assessment1");
     },
   },
 };

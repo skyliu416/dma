@@ -94,7 +94,7 @@ export default {
        avg: ((this.value1+this.value2+this.value3+this.value4+this.value5) / 5).toFixed(1)
       }
       localStorage.setItem('q4', JSON.stringify(result))
-      this.$router.push('/assessment5')
+      this.$router.push('/dma/assessment5')
     },
     change(v) {
       let marks = document.getElementsByClassName("el-slider__marks-text");

@@ -27,7 +27,7 @@ export default {
       let end = this.$refs.end;
 
       end.addEventListener("webkitAnimationEnd", () => {
-         this.$router.push('/')
+         this.$router.push('/dma')
       });
     });
   },

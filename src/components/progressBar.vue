@@ -1,23 +1,30 @@
 <template>
-  <div class="home">
-    <div ref="progressBar" class="progress">
-      <span>正在加载</span>
-      <div class="barDiv">
-        <div class="bar"></div>
+  <div class="page">
+    <div class="content">
+      <div ref="progressBar" class="progress">
+        <span>正在加载</span>
+        <div class="barDiv">
+          <div class="bar"></div>
+        </div>
       </div>
+    </div>
+    <div class="footer">
+      <eyfooter />
     </div>
   </div>
 </template>
 
 <script>
+import eyfooter from "./eyfooter.vue";
 export default {
   name: "ProgressBar",
+  components: { eyfooter },
   created() {
     this.$nextTick(function () {
       let progressBar = this.$refs.progressBar;
 
       progressBar.addEventListener("webkitAnimationEnd", () => {
-        this.$router.push('/home')
+        this.$router.push("/dma/home");
       });
     });
   },
@@ -26,7 +33,7 @@ export default {
 
 <style scoped>
 .home {
-  background: url('../../src/assets/opacity.png');
+  background: url(../../src/assets/opacity.png);
   background-repeat: no-repeat;
   background-size: auto 80%;
   background-position: center center;
@@ -37,7 +44,6 @@ export default {
   justify-content: center;
 }
 .progress {
-  margin-bottom: 5%;
   width: 15%;
   display: flex;
   flex-direction: column;

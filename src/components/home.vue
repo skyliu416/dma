@@ -3,7 +3,7 @@
     <div class="content">
       <div class="title">
         <div style="width= 100%;">数字化成熟度评估</div>
-        <img class="wslogo" src="../../src/assets/wavespace.png" />
+        <img class="wslogo" src="@/assets/wavespace.png" />
         <div style="display: flex; justify-content: center; width: 100%">
           <el-button size="mini" class="btn" @click="gotoNext()"
             ><span class="textOpacity">确 定</span></el-button
@@ -26,7 +26,7 @@ export default {
 
   methods: {
     gotoNext() {
-      this.$router.push("/intro");
+      this.$router.push("/dma/intro");
     },
   },
   created() {},

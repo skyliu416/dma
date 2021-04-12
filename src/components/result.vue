@@ -134,7 +134,7 @@ export default {
       this.email = "";
       this.contact = "";
       localStorage.clear();
-      this.$router.push("/end");
+      this.$router.push("/dma/end");
     },
     drawPie(id) {
       let avg1 = parseFloat(JSON.parse(localStorage.getItem("q1")).avg);

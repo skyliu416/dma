@@ -47,7 +47,7 @@ body {
 }
 
 .page {
-  background: url(../src/assets/opacity.png);
+  background: url(/@assets/opacity.png);
   background-repeat: no-repeat;
   background-size: auto 80%;
   background-position: center center;
@@ -124,7 +124,7 @@ el-button:focus,
       background-color: inherit !important;
 }
 .el-slider__runway{
-  box-shadow: 0px 0px 2px 1px #ffe600;
+  box-shadow: 0px 0px 2px 1px grey;
   background: grey !important;
 }
 .title {

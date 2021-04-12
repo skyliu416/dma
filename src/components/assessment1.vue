@@ -107,7 +107,7 @@ export default {
         ).toFixed(1),
       };
       localStorage.setItem("q1", JSON.stringify(result));
-      this.$router.push("/assessment2");
+      this.$router.push("/dma/assessment2");
     },
     change(v) {
       let marks = document.getElementsByClassName("el-slider__marks-text");
