@@ -1,6 +1,6 @@
 <template>
   <div class='eyfooter'>
-     <img class="footerlogo" src="../../src/assets/wavespace.png" />
+     <img class="footerlogo" src="@/assets/wavespace.png" />
   </div>
 </template>
 

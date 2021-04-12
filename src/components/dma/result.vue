@@ -49,7 +49,7 @@
               ><br />下一步数字化发展可对标的企业有:<br />......
             </div>
           </div>
-          <div class="contacts">
+          <div id='contacts' class="contacts">
             <div class="desc" style="">填写联系信息，获取完整版数据解读</div>
             <div class="form" style="margin-top: 10%">
               <span class="inline-block wid30">姓名</span
@@ -70,7 +70,7 @@
         </div>
       </div>
       <div class="footer">
-        <img class="footerlogo" src="../../src/assets/wavespace.png" />
+        <img class="footerlogo" src="/wavespace.png" />
       </div>
     </div>
   </div>
@@ -88,6 +88,7 @@ export default {
       company: "",
       email: "",
       contact: "",
+      showContact:true,
       showResult: {
         a: false,
         b: false,
@@ -150,6 +151,7 @@ export default {
       let avg5 = 1;
 
       if (window.location.href.indexOf("?") != -1) {
+        document.getElementById('contacts').style.opacity = 0;
         avg1 = parseFloat(this.getQueryString("q1")||1);
         avg2 = parseFloat(this.getQueryString("q2")||1);
         avg3 = parseFloat(this.getQueryString("q3")||1);
@@ -327,7 +329,7 @@ export default {
 
 <style scoped>
 .result {
-  background: url(../../src/assets/opacity.png);
+  background: url(../../../src/assets/opacity.png);
   background-repeat: no-repeat;
   background-size: 90% auto;
   background-position: center center;

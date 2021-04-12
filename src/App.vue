@@ -47,7 +47,7 @@ body {
 }
 
 .page {
-  background: url(/@assets/opacity.png);
+  background: url('../src/assets/opacity.png');
   background-repeat: no-repeat;
   background-size: auto 80%;
   background-position: center center;
