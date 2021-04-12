@@ -8,7 +8,7 @@
     </div>
     <div class="right">
       <div class="content flexColumn">
-        <div class="" style='width:80% '>
+        <div class="" style="width: 80%">
           <div class="marks" v-show="showResult.a">
             <span class="f36 yellow">{{ avg }}分 /</span
             ><span class="f24 yellow">5分</span>
@@ -68,10 +68,9 @@
             </div>
           </div>
         </div>
-        
       </div>
-      <div class='footer'>
-         <img class="footerlogo" src="../../src/assets/wavespace.png" />
+      <div class="footer">
+        <img class="footerlogo" src="../../src/assets/wavespace.png" />
       </div>
     </div>
   </div>
@@ -102,14 +101,21 @@ export default {
     this.$nextTick(function () {
       this.drawPie("radar");
     });
-    window.onresize = () => {
-      //  根据窗口大小调整曲线大小
-      // console.log(1)
-      // this.charts.resize();
-    };
   },
 
   methods: {
+    getQueryString(param) {
+      var query = window.location.search.substring(1);
+      var vars = query.split("&");
+      for (var i = 0; i < vars.length; i++) {
+        var pair = vars[i].split("=");
+        if (pair[0] == param) {
+          return pair[1];
+        }
+      }
+      return false;
+    },
+
     async submit() {
       //send api
       let assessment = {
@@ -137,11 +143,25 @@ export default {
       this.$router.push("/dma/end");
     },
     drawPie(id) {
-      let avg1 = parseFloat(JSON.parse(localStorage.getItem("q1")).avg);
-      let avg2 = parseFloat(JSON.parse(localStorage.getItem("q2")).avg);
-      let avg3 = parseFloat(JSON.parse(localStorage.getItem("q3")).avg);
-      let avg4 = parseFloat(JSON.parse(localStorage.getItem("q4")).avg);
-      let avg5 = parseFloat(JSON.parse(localStorage.getItem("q5")).avg);
+      let avg1 = 1;
+      let avg2 = 1;
+      let avg3 = 1;
+      let avg4 = 1;
+      let avg5 = 1;
+
+      if (window.location.href.indexOf("?") != -1) {
+        avg1 = parseFloat(this.getQueryString("q1")||1);
+        avg2 = parseFloat(this.getQueryString("q2")||1);
+        avg3 = parseFloat(this.getQueryString("q3")||1);
+        avg4 = parseFloat(this.getQueryString("q4")||1);
+        avg5 = parseFloat(this.getQueryString("q5")||1);
+      } else {
+        avg1 = parseFloat(JSON.parse(localStorage.getItem("q1")).avg);
+        avg2 = parseFloat(JSON.parse(localStorage.getItem("q2")).avg);
+        avg3 = parseFloat(JSON.parse(localStorage.getItem("q3")).avg);
+        avg4 = parseFloat(JSON.parse(localStorage.getItem("q4")).avg);
+        avg5 = parseFloat(JSON.parse(localStorage.getItem("q5")).avg);
+      }
 
       this.avg = ((avg1 + avg2 + avg3 + avg4 + avg5) / 5).toFixed(1);
       if (1 <= this.avg <= 1.4) {
@@ -177,7 +197,7 @@ export default {
             },
           },
           axisLabel: {
-            show: true,
+            show: false,
             fontSize: 20,
             color: "#000",
             fontStyle: "normal",
@@ -192,7 +212,7 @@ export default {
           splitLine: {
             show: true,
             lineStyle: {
-              type:'dashed',
+              type: "dashed",
               color: "grey",
               width: 1,
             },
@@ -236,9 +256,8 @@ export default {
             symbol: "circle",
             symbolSize: 20,
             areaStyle: {
-           
               normal: {
-                   color:'rgba(255,255,255,0.6)',
+                color: "rgba(255,255,255,0.6)",
                 // color: new echarts.graphic.LinearGradient(
                 //   0,
                 //   0,
@@ -327,7 +346,7 @@ export default {
 .right {
   height: 100%;
   width: 30%;
-  background-color: rgba(255,255,255,0.13);
+  background-color: rgba(255, 255, 255, 0.13);
   position: relative;
   display: flex;
   flex-direction: column;
@@ -410,7 +429,7 @@ export default {
 
 input {
   margin-top: 1%;
-      width: -webkit-fill-available;
+  width: -webkit-fill-available;
 }
 
 .btn,
@@ -423,18 +442,17 @@ input {
   border-color: #ffe600;
 }
 
-.footer{
-width: 90%;
-    bottom: 0;
-    margin-right: 5%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    height: 5%;
-
-}
-.footerlogo{
+.footer {
+  width: 90%;
+  bottom: 0;
+  margin-right: 5%;
   display: flex;
-width: 30%;
+  justify-content: flex-end;
+  align-items: center;
+  height: 5%;
+}
+.footerlogo {
+  display: flex;
+  width: 30%;
 }
 </style>
