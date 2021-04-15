@@ -72,10 +72,16 @@ export default new Router({
       component: End
     },
     {
+      path: '/talent',
+      name: 'TalentHome',
+      component: TalentHome
+    },
+    {
       path: '/talent/home',
       name: 'TalentHome',
       component: TalentHome
     },
+
     {
       path: '/talent/intro',
       name: 'TalentIntro',
