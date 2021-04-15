@@ -150,7 +150,7 @@ el-button:focus,
   font-size: 32px;
   color: white;
   align-items:center;
-  /* padding: 30px 30px 10px 30px; */
+  padding: 30px 30px 10px 30px;
   /* height: 10%; */
   width: 95%;
   justify-content: space-between;

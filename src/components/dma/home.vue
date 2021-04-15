@@ -1,7 +1,7 @@
 <template>
   <div class="dma">
     <div class="content">
-      <div class="title">
+      <div class="hometitle">
         <div style="width= 100%;">数字化成熟度评估</div>
         <img class="wslogo" src="@/assets/wavespace.png" />
         <div style="display: flex; justify-content: center; width: 256px">
@@ -35,7 +35,7 @@ export default {
 
 <style scoped>
 
-.title {
+.hometitle {
      display: flex;
     font-size: 32px;
     width: 30%;

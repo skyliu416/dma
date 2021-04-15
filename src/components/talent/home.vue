@@ -1,10 +1,10 @@
 <template>
   <div class="talentPage">
     <div class="talentContent flexColumn">
-      <div class="title">
+      <div class="talentTitle">
         <div style="width= 100%;">创新团队能力评估</div>
         <img class="wslogo" src="@/assets/wavespace.png" />
-        <div style="display: flex; justify-content: center; width:256px">
+        <div style="display: flex; justify-content: center; width: 256px">
           <el-button size="mini" class="btn" @click="gotoNext()"
             ><span class="textOpacity">确 定</span></el-button
           >
@@ -34,18 +34,16 @@ export default {
 </script>
 
 <style scoped>
-
-/deep/ .btn{
-      background: rgba(74, 128, 218, 0.7) !important;
-    border: none !important;
-    margin-top: 30px;
-    height: 35px;
-    width: 100%;
-    color: white;
-
+/deep/ .btn {
+  background: rgba(74, 128, 218, 0.7) !important;
+  border: none !important;
+  margin-top: 30px;
+  height: 35px;
+  width: 100%;
+  color: white;
 }
 
-.textOpacity{
+.textOpacity {
   color: white;
   font-size: 16px;
   font-weight: 600;
@@ -54,17 +52,24 @@ export default {
 <style>
 .talentPage {
   /* background: -webkit-linear-gradient(135deg,rgba(40,90,170,1),rgba(40,90,170,0.9), rgba(19,30,82)); */
-  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(40,90,170,1)), color-stop(50%,rgba(40,90,170,0.9)),color-stop(100%,rgba(19,30,82,1))) !important;
-    /* background-image: linear-gradient(135deg,rgba(40,90,170,0.8), rgba(19,30,82));  */
-   
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right bottom,
+    color-stop(0%, rgba(40, 90, 170, 1)),
+    color-stop(50%, rgba(40, 90, 170, 0.9)),
+    color-stop(100%, rgba(19, 30, 82, 1))
+  ) !important;
+  /* background-image: linear-gradient(135deg,rgba(40,90,170,0.8), rgba(19,30,82));  */
+
   display: flex;
   flex-direction: column;
   width: 100%;
   height: 100%;
-      align-items: center;
+  align-items: center;
 }
 
-.talentContent{
+.talentContent {
   /* background: url('../../../src/assets/talentBG.png'); */
   background-repeat: no-repeat;
   background-size: auto 80%;
@@ -73,18 +78,16 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-    width: 90%;
-    height: 90%;
- 
+  width: 90%;
+  height: 90%;
 }
 
-
-.title {
-     display: flex;
-    font-size: 32px;
-    width: 30%;
-    text-align: center;
-    flex-direction: column;
+.talentTitle {
+  display: flex;
+  font-size: 32px;
+  width: 30%;
+  text-align: center;
+  flex-direction: column;
   color: white;
   align-items: center;
   -webkit-animation: display 3s;
@@ -100,10 +103,10 @@ export default {
   }
 }
 
-.btn{
-   font-weight: 600;
+.btn {
+  font-weight: 600;
   margin-top: 30px;
-    height: 35px;
+  height: 35px;
 }
 .textOpacity {
   opacity: 0;
@@ -120,6 +123,4 @@ export default {
     opacity: 1;
   }
 }
-
-
 </style>
