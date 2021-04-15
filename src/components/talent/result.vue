@@ -1,82 +1,82 @@
 <template>
-<div class='talentPage'>
-  <div class="talentContent">
-    <div class="left">
-      <div class="title">
-        <span>创新团队能力评估</span>
+  <div class="talentPage">
+    <div class="talentContent">
+      <div class="left">
+        <div class="title">
+          <span>创新团队能力评估</span>
+        </div>
+        <div id="radar"></div>
       </div>
-      <div id="radar"></div>
-    </div>
-    <div class="right">
-      <div class="content flexColumn">
-        <div class="" style="width: 90%">
-          <div class="marks" v-show="showResult.a">
-            <span class="f36 yellow">{{ avg }}分 /</span
-            ><span class="f24 yellow">5分</span>
-            <div>
-              数字化成熟度处于<span class="yellow">起步阶段</span
-              ><br />下一步数字化发展可对标的企业有:<br />......
-            </div>
-          </div>
-          <div class="marks" v-show="showResult.b">
-            <span class="f36 yellow">{{ avg }} /</span
-            ><span class="f24 yellow">5分</span>
-            <div>
-              数字化成熟度处于<span class="yellow">发展阶段</span
-              ><br />下一步数字化发展可对标的企业有:<br />......
-            </div>
-          </div>
-          <div class="marks" v-show="showResult.c">
-            <span class="f36 yellow">{{ avg }} /</span
-            ><span class="f24 yellow">5分</span>
-            <div>
-              数字化成熟度达到<span class="yellow">行业平均水平</span
-              ><br />下一步数字化发展可对标的企业有:<br />......
-            </div>
-          </div>
-          <div class="marks" v-show="showResult.d">
-            <span class="f36 yellow">{{ avg }} /</span
-            ><span class="f24 yellow">5分</span>
-            <div>
-              数字化成熟度接近<span class="yellow">行业领先水平</span
-              ><br />下一步数字化发展可对标的企业有:<br />......
-            </div>
-          </div>
-          <div class="marks" v-show="showResult.e">
-            <span class="f36 yellow">{{ avg }} /</span
-            ><span class="f24 yellow">5分</span>
-            <div>
-              数字化成熟度达到<span class="yellow">行业领先水平</span
-              ><br />下一步数字化发展可对标的企业有:<br />......
-            </div>
-          </div>
-          <div id='contacts' class="contacts">
-            <div class="desc" style="">填写联系信息，获取完整版数据解读</div>
-            <div class="form" style="margin-top: 10%">
-              <span class="inline-block wid30">姓名</span
-              ><span class="ml10">组织/企业名称</span>
-              <div style="display: flex">
-                <input class="wid30" v-model="name" />
-                <input class="ml10" v-model="company" />
-              </div>
-              <div class="mt2">联系方式 (手机/微信）</div>
-              <input class=" " v-model="contact" />
-              <div class="mt2">联系邮箱</div>
-              <input class=" " v-model="email" />
+      <div class="right">
+        <div class="content flexColumn">
+          <div class="" style="width: 90%">
+            <div class="marks" v-show="showResult.a">
+              <span class="f36 yellow">{{ avg }}分 /</span
+              ><span class="f24 yellow">5分</span>
               <div>
-                <el-button class="btn" @click="submit()">
-                  <span class='btnText'>提 交</span>
-                </el-button>
+                数字化成熟度处于<span class="yellow">起步阶段</span
+                ><br />下一步数字化发展可对标的企业有:<br />......
+              </div>
+            </div>
+            <div class="marks" v-show="showResult.b">
+              <span class="f36 yellow">{{ avg }} /</span
+              ><span class="f24 yellow">5分</span>
+              <div>
+                数字化成熟度处于<span class="yellow">发展阶段</span
+                ><br />下一步数字化发展可对标的企业有:<br />......
+              </div>
+            </div>
+            <div class="marks" v-show="showResult.c">
+              <span class="f36 yellow">{{ avg }} /</span
+              ><span class="f24 yellow">5分</span>
+              <div>
+                数字化成熟度达到<span class="yellow">行业平均水平</span
+                ><br />下一步数字化发展可对标的企业有:<br />......
+              </div>
+            </div>
+            <div class="marks" v-show="showResult.d">
+              <span class="f36 yellow">{{ avg }} /</span
+              ><span class="f24 yellow">5分</span>
+              <div>
+                数字化成熟度接近<span class="yellow">行业领先水平</span
+                ><br />下一步数字化发展可对标的企业有:<br />......
+              </div>
+            </div>
+            <div class="marks" v-show="showResult.e">
+              <span class="f36 yellow">{{ avg }} /</span
+              ><span class="f24 yellow">5分</span>
+              <div>
+                数字化成熟度达到<span class="yellow">行业领先水平</span
+                ><br />下一步数字化发展可对标的企业有:<br />......
+              </div>
+            </div>
+            <div id="contacts" class="contacts">
+              <div class="desc" style="">填写联系信息，获取完整版数据解读</div>
+              <div class="form" style="margin-top: 10%">
+                <span class="inline-block wid30">姓名</span
+                ><span class="ml10">组织/企业名称</span>
+                <div style="display: flex">
+                  <input class="wid30" v-model="name" />
+                  <input class="ml10" v-model="company" />
+                </div>
+                <div class="mt2">联系方式 (手机/微信）</div>
+                <input class=" " v-model="contact" />
+                <div class="mt2">联系邮箱</div>
+                <input class=" " v-model="email" />
+                <div>
+                  <el-button class="btn" @click="submit()">
+                    <span class="btnText">提 交</span>
+                  </el-button>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="footer">
-        <img class="footerlogo" src="@/assets/wavespace.png" />
+        <div class="footer">
+          <img class="footerlogo" src="@/assets/wavespace.png" />
+        </div>
       </div>
     </div>
-  </div>
   </div>
 </template>
 
@@ -92,7 +92,8 @@ export default {
       company: "",
       email: "",
       contact: "",
-      showContact:true,
+      showContact: true,
+      assessment:'',
       showResult: {
         a: false,
         b: false,
@@ -100,9 +101,77 @@ export default {
         d: false,
         e: false,
       },
+      avg1: 1,
+      avg2: 1,
+      avg3: 1,
+      avg4: 1,
+      avg5: 1,
+      avg6: 1,
     };
   },
   mounted() {
+    let result = localStorage.getItem("talent").split(","); //talent result
+
+    if (window.location.href.indexOf("?") != -1) {
+      document.getElementById("contacts").style.opacity = 0;
+      this.avg1 = parseFloat(this.getQueryString("q1") || 1);
+      this.avg2 = parseFloat(this.getQueryString("q2") || 1);
+      this.avg3 = parseFloat(this.getQueryString("q3") || 1);
+      this.avg4 = parseFloat(this.getQueryString("q4") || 1);
+      this.avg5 = parseFloat(this.getQueryString("q5") || 1);
+      this.avg6 = parseFloat(this.getQueryString("q6") || 1);
+    } else {
+      this.avg1 = (result[0] * 1 + result[1] * 1 + result[2] * 1) / 3;
+      this.avg2 = (result[3] * 1 + result[4] * 1 + result[5] * 1) / 3;
+      this.avg3 = (result[6] * 1 + result[7] * 1 + result[8] * 1) / 3;
+      this.avg4 = (result[9] * 1 + result[10] * 1 + result[11] * 1) / 3;
+      this.avg5 = (result[12] * 1 + result[13] * 1 + result[14] * 1) / 3;
+      this.avg6 = (result[15] * 1 + result[16] * 1 + result[17] * 1) / 3;
+    }
+
+    this.avg = (
+      (this.avg1 + this.avg2 + this.avg3 + this.avg4 + this.avg5 + this.avg6) /
+      6
+    ).toFixed(1);
+
+   this.assessment = {
+        q1: {
+          points: [result[0] * 1, result[1] * 1, result[2] * 1],
+          avg: this.avg1,
+        },
+        q2: {
+          points: [result[3] * 1, result[4] * 1, result[5] * 1],
+          avg: this.avg2,
+        },
+        q3: {
+          points: [result[6] * 1, result[7] * 1, result[8] * 1],
+          avg: this.avg3,
+        },
+        q4: {
+          points: [result[9] * 1, result[10] * 1, result[11] * 1],
+          avg: this.avg4,
+        },
+        q5: {
+          points: [result[12] * 1, result[13] * 1, result[14] * 1],
+          avg: this.avg5,
+        },
+        q6: {
+          points: [result[15] * 1, result[16] * 1, result[17] * 1],
+          avg: this.avg6,
+        },
+      };
+
+    if (1 <= this.avg <= 1.4) {
+      this.showResult.a = true;
+    } else if (1.5 <= this.avg <= 2.4) {
+      this.showResult.b = true;
+    } else if (2.5 <= this.avg <= 3.4) {
+      this.showResult.c = true;
+    } else if (3.5 <= this.avg <= 4.5) {
+      this.showResult.d = true;
+    } else if (4.5 <= this.avg <= 5) {
+      this.showResult.e = true;
+    }
     this.$nextTick(function () {
       this.drawPie("radar");
     });
@@ -123,20 +192,14 @@ export default {
 
     async submit() {
       //send api
-      let assessment = {
-        q1: JSON.parse(localStorage.getItem("q1")),
-        q2: JSON.parse(localStorage.getItem("q2")),
-        q3: JSON.parse(localStorage.getItem("q3")),
-        q4: JSON.parse(localStorage.getItem("q4")),
-        q5: JSON.parse(localStorage.getItem("q5")),
-      };
+      
       let result = {
-        eventID: 1,
+        eventID: 2,
         name: this.name,
         company: this.company,
         email: this.email,
         contact: this.contact,
-        assessment: JSON.stringify(assessment),
+        assessment: JSON.stringify(this.assessment),
       };
 
       await this.$api.submit(result);
@@ -148,51 +211,11 @@ export default {
       this.$router.push("/talent/end");
     },
     drawPie(id) {
-      let avg1 = 1;
-      let avg2 = 1;
-      let avg3 = 1;
-      let avg4 = 1;
-      let avg5 = 1;
-      let avg6 = 1;
-let result = localStorage.getItem('talent').split(',') //talent result
-console.log(result)
-      if (window.location.href.indexOf("?") != -1) {
-        document.getElementById('contacts').style.opacity = 0;
-        avg1 = parseFloat(this.getQueryString("q1")||1);
-        avg2 = parseFloat(this.getQueryString("q2")||1);
-        avg3 = parseFloat(this.getQueryString("q3")||1);
-        avg4 = parseFloat(this.getQueryString("q4")||1);
-        avg5 = parseFloat(this.getQueryString("q5")||1);
-        avg6 = parseFloat(this.getQueryString("q5")||1);
-      } else {
-        avg1 = (result[0]*1+result[1]*1+result[2]*1) / 3
-        avg2 = (result[3]*1+result[4]*1+result[5]*1) / 3
-        avg3 = (result[6]*1+result[7]*1+result[8]*1) / 3
-        avg4 = (result[9]*1+result[10]*1+result[11]*1) / 3
-        avg5 = (result[12]*1+result[13]*1+result[14]*1) / 3
-        avg6 = (result[15]*1+result[16]*1+result[17]*1) / 3
-      }
-
-      this.avg = ((avg1 + avg2 + avg3 + avg4 + avg5 + avg6) / 6).toFixed(1);
-      console.log(result[1]+result[2])
-      console.log(1)
-      console.log(avg6)
-      if (1 <= this.avg <= 1.4) {
-        this.showResult.a = true;
-      } else if (1.5 <= this.avg <= 2.4) {
-        this.showResult.b = true;
-      } else if (2.5 <= this.avg <= 3.4) {
-        this.showResult.c = true;
-      } else if (3.5 <= this.avg <= 4.5) {
-        this.showResult.d = true;
-      } else if (4.5 <= this.avg <= 5) {
-        this.showResult.e = true;
-      }
       this.charts = echarts.init(document.getElementById(id));
 
       this.charts.setOption({
-        backgroundColor:'transparent',
-        color: 'white',
+        backgroundColor: "transparent",
+        color: "white",
         tooltip: {
           show: false,
           trigger: "item",
@@ -207,9 +230,9 @@ console.log(result)
           // shape: "circle",
           splitArea: {
             areaStyle: {
-             color:['rgba(76,111,171, 0.8)', 'rgba(61,99,163,.3)'].reverse(),
-            //  shadowBlur: 30,
-            //     shadowOffsetY: 20
+              color: ["rgba(76,111,171, 0.8)", "rgba(61,99,163,.3)"].reverse(),
+              //  shadowBlur: 30,
+              //     shadowOffsetY: 20
             },
           },
           axisLabel: {
@@ -316,7 +339,6 @@ console.log(result)
               borderWidth: 0,
             },
             lineStyle: {
-             
               normal: {
                 color: "white",
                 width: 0,
@@ -324,7 +346,14 @@ console.log(result)
             },
             data: [
               {
-                value: [avg1, avg2, avg3, avg4, avg5, avg6],
+                value: [
+                  this.avg1,
+                  this.avg2,
+                  this.avg3,
+                  this.avg4,
+                  this.avg5,
+                  this.avg6,
+                ],
                 label: {
                   fontSize: "12",
                   show: true,
@@ -347,12 +376,12 @@ console.log(result)
 </script>
 
 <style scoped>
-.content{
+.content {
   background: none;
   display: flex;
   height: 95%;
   width: 90%;
-    align-items: center;
+  align-items: center;
   justify-content: center;
 }
 
@@ -377,7 +406,7 @@ console.log(result)
   height: 100%;
   width: 30%;
   background-color: rgba(255, 255, 255, 0.13);
-   /* background-color:rgba(75, 111, 171, 0.13); */
+  /* background-color:rgba(75, 111, 171, 0.13); */
   position: relative;
   display: flex;
   flex-direction: column;
@@ -464,8 +493,6 @@ input {
   width: -webkit-fill-available;
 }
 
-
-
 .footer {
   width: 90%;
   bottom: 0;
@@ -479,27 +506,26 @@ input {
   display: flex;
   width: 30%;
 }
-.talentContent{
+.talentContent {
   height: 100%;
   width: 100%;
 }
-/deep/ .btn{
-      background: rgba(74, 128, 218, 0.7) !important;
-    border: none !important;
-    margin-top: 40px;
-    height: 35px;
-    width: 100%;
-    color: white;
-
+/deep/ .btn {
+  background: rgba(74, 128, 218, 0.7) !important;
+  border: none !important;
+  margin-top: 40px;
+  height: 35px;
+  width: 100%;
+  color: white;
 }
 
-.btnText{
+.btnText {
   color: white;
   font-size: 18px;
   font-weight: 600;
 }
 
-.title{
-      padding: 30px 30px 10px 30px;
+.title {
+  padding: 30px 30px 10px 30px;
 }
 </style>
