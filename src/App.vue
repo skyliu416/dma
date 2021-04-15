@@ -50,18 +50,18 @@ body {
       align-items: center;
 }
 
-
 .content{
   background: url('../src/assets/opacity.png');
   background-repeat: no-repeat;
   background-size: auto 80%;
   background-position: center center;
   display: flex;
-  height: 95%;
+  height: 90%;
   width: 90%;
     align-items: center;
   justify-content: center;
 }
+
 .flexColumn{
   flex-direction: column;
 }
@@ -83,6 +83,26 @@ li {
 
 .fl {
   float: left;
+}
+/*包含以下四种的链接*/
+a {
+    text-decoration: none;
+}
+/*正常的未被访问过的链接*/
+a:link {
+    text-decoration: none;
+}
+/*已经访问过的链接*/
+a:visited {
+    text-decoration: none;
+}
+/*鼠标划过(停留)的链接*/
+a:hover {
+    text-decoration: none;
+}
+/* 正在点击的链接*/
+a:active {
+    text-decoration: none;
 }
 
 input{

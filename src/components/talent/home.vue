@@ -6,7 +6,7 @@
         <img class="wslogo" src="@/assets/wavespace.png" />
         <div style="display: flex; justify-content: center; width:256px">
           <el-button size="mini" class="btn" @click="gotoNext()"
-            ><span class="btnText">进 入</span></el-button
+            ><span class="textOpacity">确 定</span></el-button
           >
         </div>
       </div>
@@ -35,18 +35,6 @@ export default {
 
 <style scoped>
 
-
-.title{
-      display: flex;
-    font-size: 32px;
-    color: white;
-    /* padding: 30px 30px 10px 30px; */
-    /* height: 10%; */
-    width: 30%;
-    text-align: center;
-    flex-direction: column;
-}
-
 /deep/ .btn{
       background: rgba(74, 128, 218, 0.7) !important;
     border: none !important;
@@ -57,9 +45,9 @@ export default {
 
 }
 
-.btnText{
+.textOpacity{
   color: white;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
 }
 </style>
@@ -89,5 +77,49 @@ export default {
     height: 90%;
  
 }
+
+
+.title {
+     display: flex;
+    font-size: 32px;
+    width: 30%;
+    text-align: center;
+    flex-direction: column;
+  color: white;
+  align-items: center;
+  -webkit-animation: display 3s;
+
+  animation-fill-mode: forwards;
+}
+@keyframes display {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.btn{
+   font-weight: 600;
+  margin-top: 30px;
+    height: 35px;
+}
+.textOpacity {
+  opacity: 0;
+  -webkit-animation: textOpacity 3s infinite;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes textOpacity {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 
 </style>

@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import Main from '../components/main'
 import Assessment1 from '../components/dma/assessment1'
 import Assessment2 from '../components/dma/assessment2'
 import Assessment3 from '../components/dma/assessment3'
@@ -21,6 +22,11 @@ Vue.use(Router)
 
 export default new Router({
   routes: [
+    {
+      path: '/',
+      name: 'Main',
+      component: Main
+    },
     {
       path: '/dma',
       name: '',

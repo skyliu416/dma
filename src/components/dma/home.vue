@@ -34,6 +34,7 @@ export default {
 </script>
 
 <style scoped>
+
 .title {
      display: flex;
     font-size: 32px;
@@ -55,12 +56,10 @@ export default {
   }
 }
 
-.btn{
-   font-weight: 600;
-  margin-top: 30px;
-    height: 35px;
-}
 .textOpacity {
+  color: black;
+  font-size: 16px;
+  font-weight: 600;
   opacity: 0;
   -webkit-animation: textOpacity 3s infinite;
   animation-delay: 1s;
@@ -74,5 +73,15 @@ export default {
   100% {
     opacity: 1;
   }
+}
+
+/deep/ .btn{
+
+    border: none !important;
+    margin-top: 30px;
+    height: 35px;
+    width: 100%;
+    color: white;
+
 }
 </style>
