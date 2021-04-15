@@ -48,7 +48,7 @@ export default {
 }
 
 /deep/ .btn{
-      background: rgba(59,94,153,0.7) !important;
+      background: rgba(74, 128, 218, 0.7) !important;
     border: none !important;
     margin-top: 30px;
     height: 35px;

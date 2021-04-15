@@ -207,7 +207,7 @@ console.log(result)
           // shape: "circle",
           splitArea: {
             areaStyle: {
-             color:['rgba(75,110,167, .5)', 'rgba(57,92,148,.5)'].reverse(),
+             color:['rgba(76,111,171, 0.8)', 'rgba(61,99,163,.3)'].reverse(),
             //  shadowBlur: 30,
             //     shadowOffsetY: 20
             },
@@ -274,7 +274,7 @@ console.log(result)
             name: "",
             type: "radar",
             // symbol: "circle",
-            // symbolSize: 0,
+            symbolSize: 5,
             areaStyle: {
               normal: {
                 color: "rgba(255,245,153,0.6)",
@@ -484,7 +484,7 @@ input {
   width: 100%;
 }
 /deep/ .btn{
-      background: rgba(59,94,153,0.7) !important;
+      background: rgba(74, 128, 218, 0.7) !important;
     border: none !important;
     margin-top: 40px;
     height: 35px;
@@ -497,5 +497,9 @@ input {
   color: white;
   font-size: 18px;
   font-weight: 600;
+}
+
+.title{
+      padding: 30px 30px 10px 30px;
 }
 </style>

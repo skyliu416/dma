@@ -375,7 +375,7 @@ export default {
 }
 #radar {
   height: 80%;
-  width: 80%;
+  width: 100%;
   margin: 10px;
 }
 
@@ -468,5 +468,8 @@ input {
 .footerlogo {
   display: flex;
   width: 30%;
+}
+.title{
+      padding: 30px 30px 10px 30px;
 }
 </style>

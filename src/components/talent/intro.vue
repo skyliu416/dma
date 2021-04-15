@@ -27,9 +27,9 @@ export default {
     this.$nextTick(function () {
       this.drawPie("pie");
     });
-    // setTimeout(()=>{
-    //    this.$router.push("/talent/assessment");
-    // },5000)
+    setTimeout(()=>{
+       this.$router.push("/talent/assessment");
+    },5000)
   },
   methods: {
     gotoNext() {
@@ -234,8 +234,8 @@ export default {
             },
             labelLine: {
               normal: {
-                length: 20,
-                length2: 120,
+                length: 40,
+                length2: 60,
                 lineStyle: {
                   color: "white",
                 },
@@ -271,7 +271,7 @@ export default {
                 rich: {
                   name: {
                     fontSize: 24,
-                    lineHeight: 30,
+                    lineHeight: 35,
                     fontWeight: "bold",
                     color: "yellow",
                     textAlign: "left",
@@ -279,14 +279,14 @@ export default {
                   right: {
                     fontSize: 14,
                     align: "right",
-                    width: 5,
+        
 
                     color: "white",
                   },
                   left: {
                     fontSize: 14,
-                    align: "center",
-                    width: 5,
+                    align: "left",
+                    
                     color: "white",
                   },
                 },
@@ -372,6 +372,9 @@ opacity:1
   height: 90%;
   width: 90%;
   /* margin: 10px; */
+}
+.talentContent {
+  width: 100%;
 }
 </style>
 
