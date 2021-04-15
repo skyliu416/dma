@@ -127,7 +127,6 @@ export default {
 <style scoped>
 .lastline1 {
   opacity: 0;
-
   width: 25%;
   font-size: 16px;
   border-top: 2px solid #ffe600;
@@ -523,17 +522,6 @@ export default {
   width: 55px;
 }
 
-.btn,
-.btn:hover,
-.btn:active,
-.btn:focus {
-  opacity: 0;
-  font-weight: bold;
-  color: black;
-  width: 175px;
-  background-color: #ffe600;
-  border-color: #ffe600;
-}
 
 .btnBlock {
   display: flex;
@@ -541,6 +529,8 @@ export default {
   height: 18%;
 }
 .btn {
+   font-weight: 600;
+  opacity: 0;
   -webkit-animation: opacity 1s;
   animation-delay: 8.5s;
   animation-fill-mode: forwards;
@@ -555,7 +545,7 @@ export default {
 </style>
 
 
-<style >
+<style scoped>
 .el-step__icon,
 .el-step__icon-inner {
   background: #ffe600 !important;

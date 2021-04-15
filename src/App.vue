@@ -50,6 +50,7 @@ body {
       align-items: center;
 }
 
+
 .content{
   background: url('../src/assets/opacity.png');
   background-repeat: no-repeat;
@@ -128,13 +129,14 @@ el-button:focus,
   display: flex;
   font-size: 32px;
   color: white;
-  padding: 30px 30px 10px 30px;
-  height: 10%;
+  align-items:center;
+  /* padding: 30px 30px 10px 30px; */
+  /* height: 10%; */
   width: 95%;
   justify-content: space-between;
 }
 .wslogo {
-  width: 10%;
+  width: 46%;
   /* height: 48px; */
   margin: 0 auto;
 }

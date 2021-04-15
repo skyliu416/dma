@@ -4,7 +4,7 @@
       <div class="title">
         <div style="width= 100%;">数字化成熟度评估</div>
         <img class="wslogo" src="@/assets/wavespace.png" />
-        <div style="display: flex; justify-content: center; width: 100%">
+        <div style="display: flex; justify-content: center; width: 256px">
           <el-button size="mini" class="btn" @click="gotoNext()"
             ><span class="textOpacity">确 定</span></el-button
           >
@@ -35,13 +35,11 @@ export default {
 
 <style scoped>
 .title {
-  text-align: center;
-  opacity: 0;
-  margin-bottom: 5%;
-  padding: 0;
-  display: block;
-  /* flex-direction: column; */
-  font-size: 32px;
+     display: flex;
+    font-size: 32px;
+    width: 30%;
+    text-align: center;
+    flex-direction: column;
   color: white;
   align-items: center;
   -webkit-animation: display 3s;
@@ -56,16 +54,11 @@ export default {
     opacity: 1;
   }
 }
-.btn,
-.btn:hover,
-.btn:active,
-.btn:focus {
-  width: 10%;
-  margin-top: 1%;
-  color: black;
-  background-color: #ffe600;
-  border-color: #ffe600;
-  font-weight: 800;
+
+.btn{
+   font-weight: 600;
+  margin-top: 30px;
+    height: 35px;
 }
 .textOpacity {
   opacity: 0;

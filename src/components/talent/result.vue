@@ -1,9 +1,9 @@
 <template>
-<div class='dma'>
-  <div class="result">
+<div class='talentPage'>
+  <div class="talentContent">
     <div class="left">
       <div class="title">
-        <span>数字化成熟度评估</span>
+        <span>创新团队能力评估</span>
       </div>
       <div id="radar"></div>
     </div>
@@ -64,14 +64,16 @@
               <div class="mt2">联系邮箱</div>
               <input class=" " v-model="email" />
               <div>
-                <el-button class="btn" @click="submit()">提 交</el-button>
+                <el-button class="btn" @click="submit()">
+                  <span class='btnText'>提 交</span>
+                </el-button>
               </div>
             </div>
           </div>
         </div>
       </div>
       <div class="footer">
-        <img class="footerlogo" src="/wavespace.png" />
+        <img class="footerlogo" src="@/assets/wavespace.png" />
       </div>
     </div>
   </div>
@@ -143,7 +145,7 @@ export default {
       this.email = "";
       this.contact = "";
       localStorage.clear();
-      this.$router.push("/dma/end");
+      this.$router.push("/talent/end");
     },
     drawPie(id) {
       let avg1 = 1;
@@ -151,7 +153,9 @@ export default {
       let avg3 = 1;
       let avg4 = 1;
       let avg5 = 1;
-
+      let avg6 = 1;
+let result = localStorage.getItem('talent').split(',') //talent result
+console.log(result)
       if (window.location.href.indexOf("?") != -1) {
         document.getElementById('contacts').style.opacity = 0;
         avg1 = parseFloat(this.getQueryString("q1")||1);
@@ -159,15 +163,20 @@ export default {
         avg3 = parseFloat(this.getQueryString("q3")||1);
         avg4 = parseFloat(this.getQueryString("q4")||1);
         avg5 = parseFloat(this.getQueryString("q5")||1);
+        avg6 = parseFloat(this.getQueryString("q5")||1);
       } else {
-        avg1 = parseFloat(JSON.parse(localStorage.getItem("q1")).avg);
-        avg2 = parseFloat(JSON.parse(localStorage.getItem("q2")).avg);
-        avg3 = parseFloat(JSON.parse(localStorage.getItem("q3")).avg);
-        avg4 = parseFloat(JSON.parse(localStorage.getItem("q4")).avg);
-        avg5 = parseFloat(JSON.parse(localStorage.getItem("q5")).avg);
+        avg1 = (result[0]*1+result[1]*1+result[2]*1) / 3
+        avg2 = (result[3]*1+result[4]*1+result[5]*1) / 3
+        avg3 = (result[6]*1+result[7]*1+result[8]*1) / 3
+        avg4 = (result[9]*1+result[10]*1+result[11]*1) / 3
+        avg5 = (result[12]*1+result[13]*1+result[14]*1) / 3
+        avg6 = (result[15]*1+result[16]*1+result[17]*1) / 3
       }
 
-      this.avg = ((avg1 + avg2 + avg3 + avg4 + avg5) / 5).toFixed(1);
+      this.avg = ((avg1 + avg2 + avg3 + avg4 + avg5 + avg6) / 6).toFixed(1);
+      console.log(result[1]+result[2])
+      console.log(1)
+      console.log(avg6)
       if (1 <= this.avg <= 1.4) {
         this.showResult.a = true;
       } else if (1.5 <= this.avg <= 2.4) {
@@ -182,7 +191,8 @@ export default {
       this.charts = echarts.init(document.getElementById(id));
 
       this.charts.setOption({
-        color: ["rgba(0,183,238, 1)", "rgba(86,199,60, 1)"],
+        backgroundColor:'transparent',
+        color: 'white',
         tooltip: {
           show: false,
           trigger: "item",
@@ -193,11 +203,13 @@ export default {
           center: ["50%", "50%"],
           radius: "70%",
           startAngle: 90,
-          splitNumber: 5,
+          splitNumber: 6,
           // shape: "circle",
           splitArea: {
             areaStyle: {
-              color: ["transparent"],
+             color:['rgba(75,110,167, .5)', 'rgba(57,92,148,.5)'].reverse(),
+            //  shadowBlur: 30,
+            //     shadowOffsetY: 20
             },
           },
           axisLabel: {
@@ -208,15 +220,15 @@ export default {
             fontWeight: "normal",
           },
           axisLine: {
-            show: true,
+            show: false,
             splitLine: {
               color: "",
             },
           },
           splitLine: {
-            show: true,
+            show: false,
             lineStyle: {
-              type: "dashed",
+              // type: "dashed",
               color: "grey",
               width: 1,
             },
@@ -250,6 +262,10 @@ export default {
               name: "组织架构与人才",
               max: 5,
             },
+            {
+              name: "xx",
+              max: 5,
+            },
           ],
         },
 
@@ -257,11 +273,11 @@ export default {
           {
             name: "",
             type: "radar",
-            symbol: "circle",
-            symbolSize: 20,
+            // symbol: "circle",
+            // symbolSize: 0,
             areaStyle: {
               normal: {
-                color: "rgba(255,255,255,0.6)",
+                color: "rgba(255,245,153,0.6)",
                 // color: new echarts.graphic.LinearGradient(
                 //   0,
                 //   0,
@@ -300,14 +316,15 @@ export default {
               borderWidth: 0,
             },
             lineStyle: {
+             
               normal: {
                 color: "white",
-                width: 1,
+                width: 0,
               },
             },
             data: [
               {
-                value: [avg1, avg2, avg3, avg4, avg5],
+                value: [avg1, avg2, avg3, avg4, avg5, avg6],
                 label: {
                   fontSize: "12",
                   show: true,
@@ -360,6 +377,7 @@ export default {
   height: 100%;
   width: 30%;
   background-color: rgba(255, 255, 255, 0.13);
+   /* background-color:rgba(75, 111, 171, 0.13); */
   position: relative;
   display: flex;
   flex-direction: column;
@@ -446,15 +464,7 @@ input {
   width: -webkit-fill-available;
 }
 
-.btn,
-.btn:hover,
-.btn:active,
-.btn:focus {
-   font-weight: 600;
-  margin-top: 10%;
-  color: black;
-  width: 100%;
-}
+
 
 .footer {
   width: 90%;
@@ -468,5 +478,24 @@ input {
 .footerlogo {
   display: flex;
   width: 30%;
+}
+.talentContent{
+  height: 100%;
+  width: 100%;
+}
+/deep/ .btn{
+      background: rgba(59,94,153,0.7) !important;
+    border: none !important;
+    margin-top: 40px;
+    height: 35px;
+    width: 100%;
+    color: white;
+
+}
+
+.btnText{
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
 }
 </style>

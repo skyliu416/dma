@@ -12,6 +12,11 @@ import ProgressBar from '../components/dma/progressBar'
 import Home from '../components/dma/home'
 
 import TalentHome from '../components/talent/home'
+import TalentIntro from '../components/talent/intro'
+import TalentAssessment from '../components/talent/assessment'
+import TalentResult from '../components/talent/result'
+import TalentEnd from '../components/talent/end'
+
 Vue.use(Router)
 
 export default new Router({
@@ -70,6 +75,26 @@ export default new Router({
       path: '/talent/home',
       name: 'TalentHome',
       component: TalentHome
+    },
+    {
+      path: '/talent/intro',
+      name: 'TalentIntro',
+      component: TalentIntro
+    },
+    {
+      path: '/talent/assessment',
+      name: 'TalentAssessment',
+      component: TalentAssessment
+    },
+    {
+      path: '/talent/result',
+      name: 'TalentResult',
+      component: TalentResult
+    },
+    {
+      path: '/talent/end',
+      name: 'TalentEnd',
+      component: TalentEnd
     },
   ] ,
   mode:'history'  

@@ -1,6 +1,6 @@
 <template>
-  <div  class="dma">
-    <div class='content'>
+  <div class="talentPage">
+    <div class="talentContent flexColumn">
       <div class='end' ref="end">
  <div class="endtitle">感谢您的参与</div>
     <div class="subtitle">
@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import eyfooter from "./eyfooter.vue";
+import eyfooter from "../dma/eyfooter.vue";
 export default {
   name: "End",
   data() {
@@ -29,7 +29,7 @@ export default {
       let end = this.$refs.end;
 
       end.addEventListener("webkitAnimationEnd", () => {
-         this.$router.push('/dma')
+         this.$router.push('/talent/home')
       });
     });
   },
@@ -52,8 +52,10 @@ export default {
 .end{
      opacity: 0;
   -webkit-animation: textOpacity 5s;
+  /* animation-delay: 1s; */
   animation-fill-mode: forwards;
   position: relative;
+  text-align: center;
 }
 .wslogo {
   width: 259px;
@@ -70,10 +72,12 @@ export default {
   height: auto;
   -webkit-animation: display 2s;
   animation-fill-mode: forwards;
+  font-weight: 600;
 }
 .subtitle {
   margin-top: 1%;
   font-size: 16px;
+  font-weight: 400;
 }
 
 @keyframes textOpacity {
