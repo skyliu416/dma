@@ -178,7 +178,8 @@ export default {
       }
     },
     answer(param, item, index) {
-      this.value[item - 1] = index + 1; //分数
+
+      this.value[item] = index + 1; //分数
       console.log(this.value);
       let iconNodes = document.querySelectorAll(".qoption>.optionBlock>.sky");
 
