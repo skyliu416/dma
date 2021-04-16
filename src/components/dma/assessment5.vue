@@ -8,7 +8,7 @@
         <div class="bar">数字化客户体验</div>
         <div class="bar">智能运营与决策</div>
         <div class="bar">信息技术与数据安全</div>
-        <div class="bar borderYellow fontWhite">组织架构与人才</div>
+        <div class="bar borderYellow fontWhite">数字化人才管理</div>
       </div>
     </div>
     <div class="question">
@@ -79,8 +79,9 @@
       </div>
     </div>
     <el-button class="btn" @click='gotoNext()'>下一页</el-button>
-   <div class='footer'><eyfooter></eyfooter></div>
+
   </div>
+  <div class='footer'><eyfooter></eyfooter></div>
 </div>
 </template>
 
@@ -172,7 +173,7 @@ export default {
       value4: 1,
       value5: 1,
       q1: {
-        q: "1. 是否有清晰的、符合企业自身创新战略的组织架构与数字化人才规划？",
+        q: "1. 是否拥有清晰的数字化人才招聘、培训与管理战略？",
         a: {
           1: "1 起步阶段",
           2: "2 正在发展",
@@ -182,7 +183,7 @@ export default {
         },
       },
       q2: {
-        q: "2. 是否充分熟悉行业内外的企业创新组织架构和数字化人才趋势？",
+        q: "2.  是否充分熟悉数字化人才管理的创新最佳实践案例？",
         a: {
           1: "1 起步阶段",
           2: "2 正在发展",
@@ -192,7 +193,7 @@ export default {
         },
       },
       q3: {
-        q: "3. 是否拥有完善的创新组织架构和数字化人才团队，以胜任创新战略部署和相应的变革管理与项目管理？",
+        q: "3. 是否拥有成熟的团队指导和推进数字化人才管理？",
         a: {
           1: "1 起步阶段",
           2: "2 正在发展",
@@ -202,7 +203,7 @@ export default {
         },
       },
       q4: {
-        q: "4. 是否拥有具备成熟新兴技术能力的数字化人才团队？",
+        q: "4. 是否已经在数字化人才管理上应用新兴技术，以支持敏捷、灵活的人才管理？",
         a: {
           1: "1 起步阶段",
           2: "2 正在发展",
@@ -212,7 +213,7 @@ export default {
         },
       },
       q5: {
-        q: "5. 是否拥有全面的创新生态合作伙伴，以支持和丰富企业内部的创新能力？",
+        q: "5. 是否在数字化人才招聘、培训与管理方面，有成熟的生态合作伙伴？",
         a: {
           1: "1 起步阶段",
           2: "2 正在发展",

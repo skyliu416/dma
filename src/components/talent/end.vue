@@ -4,7 +4,8 @@
       <div class='end' ref="end">
  <div class="endtitle">感谢您的参与</div>
     <div class="subtitle">
-      本区域还有安永整理总结的行业数字化转型最佳实践，<br />欢迎前往房间浏览
+      欢迎和创新顾问进一步咨询团队创新能力提升方案
+
     </div>
     </div>
     </div>
@@ -66,17 +67,15 @@ export default {
   /* margin-top: 20%; */
   /* display: flex; */
   flex-direction: column;
-  font-size: 32px;
+  font-size: 28px;
   color: white;
   align-items: center;
   height: auto;
-  -webkit-animation: display 2s;
-  animation-fill-mode: forwards;
   font-weight: 600;
 }
 .subtitle {
   margin-top: 1%;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 400;
 }
 

@@ -11,17 +11,17 @@
         </div>
       </div>
     </div>
-    <div class="footer">
+    <!-- <div class="footer">
       <eyfooter />
-    </div>
+    </div> -->
   </div>
 </template>
 
 <script>
-import eyfooter from "../dma/eyfooter.vue";
+// import eyfooter from "../dma/eyfooter.vue";
 
 export default {
-  components: { eyfooter },
+  // components: { eyfooter },
   name: "Home",
 
   methods: {
@@ -35,7 +35,7 @@ export default {
 
 <style scoped>
 /deep/ .btn {
-  background: rgba(74, 128, 218, 0.7) !important;
+  background: rgba(74, 128, 218, 0.3) !important;
   border: none !important;
   margin-top: 30px;
   height: 35px;
@@ -79,19 +79,18 @@ export default {
   justify-content: center;
   align-items: center;
   width: 90%;
-  height: 90%;
+  height: 95%;
 }
 
 .talentTitle {
   display: flex;
-  font-size: 32px;
+  font-size: 30px;
   width: 30%;
   text-align: center;
   flex-direction: column;
   color: white;
   align-items: center;
   -webkit-animation: display 3s;
-
   animation-fill-mode: forwards;
 }
 @keyframes display {

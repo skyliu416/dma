@@ -9,13 +9,13 @@
     </div>
     <div class="right">
       <div class="content flexColumn">
-        <div class="" style="width: 90%">
+        <div class="" style="width: 100%">
           <div class="marks" v-show="showResult.a">
             <span class="f36 yellow">{{ avg }}分 /</span
             ><span class="f24 yellow">5分</span>
             <div>
               数字化成熟度处于<span class="yellow">起步阶段</span
-              ><br />下一步数字化发展可对标的企业有:<br />......
+              ><br />下一步需着力在新经济创新战略与创新组织架构建设等顶层设计方向，针对企业数字化成熟度现状，建议对标的企业有….
             </div>
           </div>
           <div class="marks" v-show="showResult.b">
@@ -23,7 +23,7 @@
             ><span class="f24 yellow">5分</span>
             <div>
               数字化成熟度处于<span class="yellow">发展阶段</span
-              ><br />下一步数字化发展可对标的企业有:<br />......
+              ><br />下一步需着力在提升新兴技术应用智慧、信息技术能力提升与创新生态建设方向，针对企业数字化成熟度现状，建议对标的企业有….
             </div>
           </div>
           <div class="marks" v-show="showResult.c">
@@ -31,7 +31,7 @@
             ><span class="f24 yellow">5分</span>
             <div>
               数字化成熟度达到<span class="yellow">行业平均水平</span
-              ><br />下一步数字化发展可对标的企业有:<br />......
+              ><br />下一步需着力在市场创新洞察和企业变革管理能力提升方向，针对企业数字化成熟度现状，建议对标的企业有….
             </div>
           </div>
           <div class="marks" v-show="showResult.d">
@@ -39,7 +39,7 @@
             ><span class="f24 yellow">5分</span>
             <div>
               数字化成熟度接近<span class="yellow">行业领先水平</span
-              ><br />下一步数字化发展可对标的企业有:<br />......
+              ><br />下一步需着力在客户体验优化与智能运营能力提升方向，针对企业数字化成熟度现状，建议对标的企业有….
             </div>
           </div>
           <div class="marks" v-show="showResult.e">
@@ -47,17 +47,27 @@
             ><span class="f24 yellow">5分</span>
             <div>
               数字化成熟度达到<span class="yellow">行业领先水平</span
-              ><br />下一步数字化发展可对标的企业有:<br />......
+              ><br />下一步建议着力领导行业，将数据资产转化为创新动能，成为产业数字化领导者，针对企业数字化成熟度现状，建议对标的企业有….
             </div>
           </div>
           <div id='contacts' class="contacts">
-            <div class="desc" style="">填写联系信息，获取完整版数据解读</div>
+            <div class="desc" style="">填写联系信息<br/>获取完整版评估报告</div>
             <div class="form" style="margin-top: 10%">
-              <span class="inline-block wid30">姓名</span
+              <!-- <span class="inline-block wid30">姓名</span
               ><span class="ml10">组织/企业名称</span>
               <div style="display: flex">
                 <input class="wid30" v-model="name" />
                 <input class="ml10" v-model="company" />
+              </div> -->
+              <div style='display:flex' class=''>
+              <div class='wid30'>
+                <div class="inline-block">姓名</div>
+                 <input class="" v-model="name" />
+              </div>
+              <div class='ml10'>
+                <div class="inline-block">组织/企业名称</div>
+                 <input class="" v-model="company" />
+              </div>
               </div>
               <div class="mt2">联系方式 (手机/微信）</div>
               <input class=" " v-model="contact" />
@@ -235,21 +245,25 @@ export default {
               max: 5,
             },
             {
-              name: "数字化客户体验",
+              name: "数字化人才管理",
               max: 5,
             },
-            {
+
+               {
+              name: "信息技术与数据安全",
+              max: 5,
+            },
+             {
               name: "智能运营与决策",
               max: 5,
             },
             {
-              name: "信息技术与数据安全",
+              name: "数字化客户体验",
               max: 5,
             },
-            {
-              name: "组织架构与人才",
-              max: 5,
-            },
+           
+         
+            
           ],
         },
 
@@ -307,7 +321,7 @@ export default {
             },
             data: [
               {
-                value: [avg1, avg2, avg3, avg4, avg5],
+                value: [avg1, avg5, avg4, avg3, avg2],
                 label: {
                   fontSize: "12",
                   show: true,
@@ -382,13 +396,13 @@ export default {
 .marks,
 .contacts {
   color: white;
-  margin: 12% 0 0 0;
+  margin: 15% 0 0 0;
 }
 .contacts {
   height: 40%;
 }
 .marks {
-  height: 25%;
+  height: 30%;
   opacity: 0;
   -webkit-animation: opacity 1s;
   animation-delay: 1s;
@@ -434,7 +448,10 @@ export default {
   margin-top: 2%;
 }
 .wid30 {
-  width: 40%;
+  width: 34%;
+  display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .inline-block {

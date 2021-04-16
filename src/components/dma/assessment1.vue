@@ -8,7 +8,7 @@
         <div class="bar">数字化客户体验</div>
         <div class="bar">智能运营与决策</div>
         <div class="bar">信息技术与数据安全</div>
-        <div class="bar">组织架构与人才</div>
+        <div class="bar">数字化人才管理</div>
       </div>
     </div>
     <div class="question">
@@ -79,8 +79,9 @@
       </div>
     </div>
     <div><el-button class="btn" @click="gotoNext()">下一页</el-button></div>
-    <div class="footer"><eyfooter></eyfooter></div>
+    
   </div>
+  <div class="footer"><eyfooter></eyfooter></div>
 </div>
 </template>
 
@@ -189,11 +190,11 @@ export default {
         },
       },
       q2: {
-        q: "2. 是否拥有持续的工作流程去收集行业内外的创新趋势与洞察？",
+        q: "2. 是否充分熟悉战略与创新增长的最佳实践案例？",
         a: {
           1: "1 起步阶段",
           2: "2 正在发展",
-          3: "3 达到标准",
+          3: "3 充分熟悉",
           4: "4 比较先进",
           5: "5 行业领先",
         },
@@ -209,7 +210,7 @@ export default {
         },
       },
       q4: {
-        q: "4. 是否已经在战略层面应用新经济/数字经济的创新商业模型？",
+        q: "4. 是否已经在战略层面应用新经济的商业模型？",
         a: {
           1: "1 起步阶段",
           2: "2 逐步了解",
@@ -219,7 +220,7 @@ export default {
         },
       },
       q5: {
-        q: "5. 是否已经通过战略联盟/投融资/兼并购打造自己的创新生态圈？",
+        q: "5. 是否已经通过多元化的投资并购活动打造自己的创新生态圈？",
         a: {
           1: "1 起步阶段",
           2: "2 正在发展",

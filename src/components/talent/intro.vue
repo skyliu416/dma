@@ -1,11 +1,17 @@
 <template>
   <div class="talentPage">
     <div class="talentContent flexColumn">
+      <div class="talentTitle">
+        <div style="width= 100%;">6 大维度全面评估创新团队</div>
+      </div>
       <div id="pie"></div>
-      <!-- <div class='' >
-        <img src='@/assets/v1.8.gif' style='width:800px;height:600px' />
-      </div> -->
+     <div style="display: flex; justify-content: center; width: 256px">
+          <el-button size="mini" class="btn" @click="gotoNext()"
+            ><span class="textOpacity">确 定</span></el-button
+          >
+        </div>
     </div>
+    
     <div class="footer">
       <eyfooter />
     </div>
@@ -27,13 +33,10 @@ export default {
     this.$nextTick(function () {
       this.drawPie("pie");
     });
-    setTimeout(()=>{
-       this.$router.push("/talent/assessment");
-    },5000)
   },
   methods: {
     gotoNext() {
-      this.$router.push("/dma/intro");
+      this.$router.push("/talent/assessment");
     },
     drawPie(id) {
       let bgColor = "rgba(57,97,168,.01)";
@@ -147,9 +150,9 @@ export default {
           name: "高管带领",
           value: "13",
           desc:
-            "从企业决策层至部门执行层能够" +
+            "从企业决策层至部门执行层能够齐心并" +
             "\n" +
-            "齐心并力地为共同的创新目标努力",
+            "地为共同的创新目标努力",
           type: 1,
         },
         {
@@ -166,15 +169,10 @@ export default {
         {
           name: "协作共赢",
           value: "13",
-          desc: "凝聚团队内外力量，实现高效合作，" + "\n" + "在变化中不断进步",
+          desc: "凝聚团队内外力量，实" + "\n" + "现高效合作，在变化中" + "\n" + "不断进步",
           type: 1,
         },
-        {
-          name: "多元团队",
-          value: "12",
-          desc: "有多领域的人才以及来自团" + "\n" + "队外和组织外的声音和资源",
-          type: 2,
-        },
+        
         {
           name: "先锋决策",
           value: "13",
@@ -190,6 +188,12 @@ export default {
           name: "持续学习",
           value: "12",
           desc: "不断汲取新的知识，迅速做" + "\n" + "出改变和提升",
+          type: 2,
+        },
+        {
+          name: "多元团队",
+          value: "12",
+          desc: "有多领域的人才以及来自团" + "\n" + "队外和组织外的声音和资源",
           type: 2,
         },
       ];
@@ -270,8 +274,8 @@ export default {
                 // padding: [0 , -100, 25, -100],
                 rich: {
                   name: {
-                    fontSize: 24,
-                    lineHeight: 35,
+                    fontSize: 22,
+                   lineHeight: 35,
                     fontWeight: "bold",
                     color: "yellow",
                     textAlign: "left",
@@ -279,14 +283,14 @@ export default {
                   right: {
                     fontSize: 14,
                     align: "right",
-        
+        lineHeight: 16,
 
                     color: "white",
                   },
                   left: {
                     fontSize: 14,
                     align: "left",
-                    
+                    lineHeight: 16,
                     color: "white",
                   },
                 },
@@ -341,25 +345,10 @@ export default {
 </script>
 
 <style scoped>
-.test {
-  position: relative;
-  height: 100%;
+.talentTitle {
+  height: 12%;
+  justify-content: flex-end;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* background-size: cover;
-  background-image: url('../../../src/assets/Picture1.png');
-  transition: opacity 5s;
-  opacity: 0; */
-}
-/* @keyframes test {
-opacity:1
-} */
-
-.im {
-  width: 450px;
-  width: 450px;
 }
 
 .left1 {
@@ -369,12 +358,57 @@ opacity:1
   background: grey;
 }
 #pie {
-  height: 90%;
+  height: 80%;
   width: 90%;
   /* margin: 10px; */
 }
 .talentContent {
   width: 100%;
 }
+
+
+@keyframes display {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.btn {
+  font-weight: 600;
+  height: 35px;
+}
+.textOpacity {
+  opacity: 0;
+  -webkit-animation: textOpacity 3s infinite;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes textOpacity {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
 </style>
 
+<style scoped>
+/deep/ .btn {
+  background: rgba(74, 128, 218, 0.3) !important;
+  border: none !important;
+  height: 35px;
+  width: 100%;
+  color: white;
+}
+
+.textOpacity {
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+}
+</style>

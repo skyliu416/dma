@@ -14,19 +14,19 @@
           </div>
           <div class="barlist">
             <el-divider class="bgYellow height16 headingBar"></el-divider>
-            <div class="headingText">战略与创新增长</div>
+            <div class="headingText">数字化客户体验</div>
           </div>
           <div class="barlist">
             <el-divider class="bgLightYellow height16 headingBar"></el-divider>
-            <div class="headingText">战略与创新增长</div>
+            <div class="headingText">智能运营与决策</div>
           </div>
           <div class="barlist">
             <el-divider class="bgYellow height16 headingBar"></el-divider>
-            <div class="headingText">战略与创新增长</div>
+            <div class="headingText">信息技术与数据安全</div>
           </div>
           <div class="barlist">
             <el-divider class="bgLightYellow height16 headingBar"></el-divider>
-            <div class="headingText">战略与创新增长</div>
+            <div class="headingText">数字化人才管理</div>
           </div>
         </div>
       </div>

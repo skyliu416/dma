@@ -56,7 +56,7 @@ body {
   background-size: auto 80%;
   background-position: center center;
   display: flex;
-  height: 90%;
+  height: 95%;
   width: 90%;
     align-items: center;
   justify-content: center;
@@ -156,7 +156,7 @@ el-button:focus,
   justify-content: space-between;
 }
 .wslogo {
-  width: 46%;
+  width: 35%;
   /* height: 48px; */
   margin: 0 auto;
 }

@@ -2,10 +2,11 @@
   <div  class="dma">
     <div class='content'>
       <div class='end' ref="end">
- <div class="endtitle">感谢您的参与</div>
-    <div class="subtitle">
+ <div class="endtitle">您已完成评估, 谢谢!</div>
+  <div class="subtitle">请移步咨询室, 参与行业洞察与对标咨询</div>
+    <!-- <div class="subtitle">
       本区域还有安永整理总结的行业数字化转型最佳实践，<br />欢迎前往房间浏览
-    </div>
+    </div> -->
     </div>
     </div>
    
@@ -50,6 +51,7 @@ export default {
 
 }
 .end{
+  text-align: center;
      opacity: 0;
   -webkit-animation: textOpacity 5s;
   animation-fill-mode: forwards;
@@ -64,16 +66,15 @@ export default {
   /* margin-top: 20%; */
   /* display: flex; */
   flex-direction: column;
-  font-size: 32px;
+  font-size: 28px;
   color: white;
   align-items: center;
   height: auto;
-  -webkit-animation: display 2s;
   animation-fill-mode: forwards;
 }
 .subtitle {
   margin-top: 1%;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 @keyframes textOpacity {

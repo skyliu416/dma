@@ -11,17 +11,17 @@
         </div>
       </div>
     </div>
-    <div class="footer">
+    <!-- <div class="footer">
       <eyfooter />
-    </div>
+    </div> -->
   </div>
 </template>
 
 <script>
-import eyfooter from "./eyfooter.vue";
+// import eyfooter from "./eyfooter.vue";
 
 export default {
-  components: { eyfooter },
+  // components: { eyfooter },
   name: "Home",
 
   methods: {
@@ -37,7 +37,7 @@ export default {
 
 .hometitle {
      display: flex;
-    font-size: 32px;
+    font-size: 30px;
     width: 30%;
     text-align: center;
     flex-direction: column;
