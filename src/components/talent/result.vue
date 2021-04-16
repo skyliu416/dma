@@ -121,7 +121,7 @@ export default {
     };
   },
   mounted() {
-    let result = localStorage.getItem("talent").split(","); //talent result
+    // let result = localStorage.getItem("talent").split(","); //talent result
 
     if (window.location.href.indexOf("?") != -1) {
       document.getElementById("contacts").style.opacity = 0;
@@ -132,6 +132,7 @@ export default {
       this.avg5 = parseFloat(this.getQueryString("q5") || 1);
       this.avg6 = parseFloat(this.getQueryString("q6") || 1);
     } else {
+      let result = localStorage.getItem("talent").split(","); //talent result
       this.avg1 = (result[0] * 1 + result[1] * 1 + result[2] * 1) / 3;
       this.avg2 = (result[3] * 1 + result[4] * 1 + result[5] * 1) / 3;
       this.avg3 = (result[6] * 1 + result[7] * 1 + result[8] * 1) / 3;
@@ -145,32 +146,7 @@ export default {
       6
     ).toFixed(1);
 
-   this.assessment = {
-        q1: {
-          points: [result[0] * 1, result[1] * 1, result[2] * 1],
-          avg: this.avg1,
-        },
-        q2: {
-          points: [result[3] * 1, result[4] * 1, result[5] * 1],
-          avg: this.avg2,
-        },
-        q3: {
-          points: [result[6] * 1, result[7] * 1, result[8] * 1],
-          avg: this.avg3,
-        },
-        q4: {
-          points: [result[9] * 1, result[10] * 1, result[11] * 1],
-          avg: this.avg4,
-        },
-        q5: {
-          points: [result[12] * 1, result[13] * 1, result[14] * 1],
-          avg: this.avg5,
-        },
-        q6: {
-          points: [result[15] * 1, result[16] * 1, result[17] * 1],
-          avg: this.avg6,
-        },
-      };
+   
 
     if (1 <= this.avg <= 1.4) {
       this.showResult.a = true;
@@ -202,9 +178,36 @@ export default {
     },
 
     async submit() {
+      let result = localStorage.getItem("talent").split(","); //talent result
       //send api
+      this.assessment = {
+        q1: {
+          points: [result[0] * 1, result[1] * 1, result[2] * 1],
+          avg: this.avg1,
+        },
+        q2: {
+          points: [result[3] * 1, result[4] * 1, result[5] * 1],
+          avg: this.avg2,
+        },
+        q3: {
+          points: [result[6] * 1, result[7] * 1, result[8] * 1],
+          avg: this.avg3,
+        },
+        q4: {
+          points: [result[9] * 1, result[10] * 1, result[11] * 1],
+          avg: this.avg4,
+        },
+        q5: {
+          points: [result[12] * 1, result[13] * 1, result[14] * 1],
+          avg: this.avg5,
+        },
+        q6: {
+          points: [result[15] * 1, result[16] * 1, result[17] * 1],
+          avg: this.avg6,
+        },
+      };
       
-      let result = {
+      let resultParam = {
         eventID: 2,
         name: this.name,
         company: this.company,
@@ -213,7 +216,7 @@ export default {
         assessment: JSON.stringify(this.assessment),
       };
 
-      await this.$api.submit(result);
+      await this.$api.submit(resultParam);
       this.name = "";
       this.company = "";
       this.email = "";
