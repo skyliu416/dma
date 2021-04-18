@@ -251,22 +251,18 @@ export default {
                   console.log(param);
                   if (param.data.type == 2) {
                     return (
-                      "{name|" +
-                      param.name +
+                      "{name|" +param.name +
                       "}" +
                       "\n" +
-                      "{right| " +
-                      param.data.desc +
+                      "{right|" +param.data.desc +
                       "}"
                     );
                   } else if (param.data.type == 1) {
                     return (
-                      "{name|" +
-                      param.name +
+                      "{name|" +param.name +
                       "}" +
                       "\n" +
-                      "{left| " +
-                      param.data.desc +
+                      "{left|" + param.data.desc +
                       "}"
                     );
                   }

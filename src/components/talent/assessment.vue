@@ -3,11 +3,11 @@
     <div class="talentContent flexColumn">
       <div class="barslide">
         <div :class="activeTab == 0 ? 'bar' : 'xbar'">多元团队</div>
-        <div :class="activeTab == 1 ? 'bar' : 'xbar'">先锋决策</div>
-        <div :class="activeTab == 2 ? 'bar' : 'xbar'">持续学习</div>
-        <div :class="activeTab == 3 ? 'bar' : 'xbar'">高管带领</div>
-        <div :class="activeTab == 4 ? 'bar' : 'xbar'">前瞻洞见</div>
-        <div :class="activeTab == 5 ? 'bar' : 'xbar'">协作共赢</div>
+        <div :class="activeTab == 1 ? 'bar' : 'xbar'">高管带领</div>
+        <div :class="activeTab == 2 ? 'bar' : 'xbar'">前瞻洞见</div>
+        <div :class="activeTab == 3 ? 'bar' : 'xbar'">协作共赢</div>
+        <div :class="activeTab == 4 ? 'bar' : 'xbar'">持续学习</div>
+        <div :class="activeTab == 5 ? 'bar' : 'xbar'">先锋决策</div>
       </div>
       <div class="questions">
         <el-carousel

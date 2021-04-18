@@ -206,7 +206,7 @@ export default {
           avg: this.avg6,
         },
       };
-      
+
       let resultParam = {
         eventID: 2,
         name: this.name,
@@ -284,14 +284,6 @@ export default {
               max: 5,
             },
             {
-              name: "先锋决策",
-              max: 5,
-            },
-            {
-              name: "持续学习",
-              max: 5,
-            },
-            {
               name: "高管带领",
               max: 5,
             },
@@ -301,6 +293,14 @@ export default {
             },
             {
               name: "协作共赢",
+              max: 5,
+            },
+            {
+              name: "持续学习",
+              max: 5,
+            },
+            {
+              name: "先锋决策",
               max: 5,
             },
           ],
