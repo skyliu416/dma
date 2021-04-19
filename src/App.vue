@@ -21,7 +21,6 @@ body {
   padding: 0;
   
   background-position: center center;
-  overflow-x: hidden;
 }
 
 #app {
@@ -46,8 +45,10 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%;
+  /* min-height: 100%; */
   height: 100%;
       align-items: center;
+      overflow: auto;
 }
 
 .content{
@@ -147,11 +148,11 @@ el-button:focus,
 }
 .title {
   display: flex;
-  font-size: 32px;
+  font-size: 30px;
   color: white;
   align-items:center;
-  padding: 30px 30px 10px 30px;
-  /* height: 10%; */
+  margin: 3% 3% 2% 3%;
+  height: 5%;
   width: 95%;
   justify-content: space-between;
 }
@@ -164,6 +165,7 @@ el-button:focus,
 .btn:hover,
 .btn:active,
 .btn:focus {
+   height: 35px;
   width: 150px;
   color: black !important;
   background-color: #ffe600 !important;
@@ -176,13 +178,14 @@ el-button:focus,
 
 
 .question {
-  margin: 2% 0 5% 0;
+  padding: 2% 5% 2% 5%;
   font-size: 16px;
-
+  height: 75%;
   width: 90%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: auto;
 }
 .assessment {
   background: url('../src/assets/opacity.png');
@@ -191,11 +194,12 @@ el-button:focus,
   background-position: center center;
   /* opacity: 50%; */
 
-  height: 100%;
+  height: 93%;
   display: flex;
   flex-direction: column;
   width: 90%;
   align-items: center;
       justify-content: space-between;
+      overflow: auto;
 }
 </style>

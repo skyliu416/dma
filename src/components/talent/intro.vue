@@ -7,7 +7,7 @@
       <div id="pie"></div>
      <div style="display: flex; justify-content: center; width: 256px">
           <el-button size="mini" class="btn" @click="gotoNext()"
-            ><span class="textOpacity">确 定</span></el-button
+            ><span class="textOpacity">开始测试</span></el-button
           >
         </div>
     </div>
@@ -148,7 +148,7 @@ export default {
       let scaleData = [
         {
           name: "高管带领",
-          value: "13",
+          value: "13.5",
           desc:
             "从企业决策层至部门执行层能够齐心并" +
             "\n" +
@@ -168,14 +168,14 @@ export default {
         },
         {
           name: "协作共赢",
-          value: "13",
+          value: "13.5",
           desc: "凝聚团队内外力量，实" + "\n" + "现高效合作，在变化中" + "\n" + "不断进步",
           type: 1,
         },
         
         {
           name: "先锋决策",
-          value: "13",
+          value: "12",
           desc:
             "在充满未知和不确定性的环" +
             "\n" +
@@ -186,7 +186,7 @@ export default {
         },
         {
           name: "持续学习",
-          value: "12",
+          value: "13.5",
           desc: "不断汲取新的知识，迅速做" + "\n" + "出改变和提升",
           type: 2,
         },

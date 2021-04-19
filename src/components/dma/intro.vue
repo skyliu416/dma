@@ -475,7 +475,7 @@ export default {
 .block {
   height: 27%;
   width: 100%;
-  font-size: 36px;
+  font-size: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -546,6 +546,10 @@ export default {
 
 
 <style scoped>
+.headingText, .headingIcon,.lastTxt1, .lastTxt2,.lastTxt3,.lastTxt4,.lastTxt5
+{
+  font-size: 14px;
+}
 .el-step__icon,
 .el-step__icon-inner {
   background: #ffe600 !important;
