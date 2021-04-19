@@ -71,8 +71,7 @@ body {
   display: flex;
     /* position: fixed; */
     width: 90%;
-    height: 6%;
-    margin-bottom: 1%;
+    height: 5%;
 }
 
 ul {
@@ -132,6 +131,9 @@ background-color: #D1D1D2  ;
 .el-slider__button {
   border: 2px solid yellow !important;
   background-color: #ffe600 !important;
+}
+.el-button{
+  padding: 0 !important;
 }
 el-button:focus,
 .el-button:hover {
@@ -195,7 +197,7 @@ el-button:focus,
   background-position: center center;
   /* opacity: 50%; */
 
-  min-height: 93%;
+  min-height: 95%;
   display: flex;
   flex-direction: column;
   width: 90%;

@@ -23,7 +23,7 @@ methods: {
     /* right: 5%; */
   display: flex;
   justify-content: flex-end;
-  align-items: center;
+  align-items: baseline;
 
 }
 

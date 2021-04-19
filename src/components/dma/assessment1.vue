@@ -264,18 +264,6 @@ export default {
 .el-slider__bar {
   background-color: #ffe600 !important;
 }
-
-/* .el-slider__button {
-  border: 2px solid #ffe600 !important;
-  background-color: #ffe600 !important;
-}
-el-button:focus,
-.el-button:hover {
-  background-color: #ffe600 !important;
-
-  border-color: #ffe600 !important;
-} */
-
 .el-slider__marks-text {
   width: fit-content;
 }
