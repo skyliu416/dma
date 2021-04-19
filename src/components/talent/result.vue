@@ -443,7 +443,7 @@ export default {
 .marks,
 .contacts {
   color: white;
-  margin: 15% 0 0 0;
+  margin: 10% 0 0 0;
 }
 .contacts {
   height: 40%;
