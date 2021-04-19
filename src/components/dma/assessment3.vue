@@ -77,8 +77,9 @@
         >
         </el-slider>
       </div>
+       <div style='margin-top:3%'><el-button class="btn" @click="gotoNext()">下一页</el-button></div>
     </div>
-    <el-button class="btn" @click='gotoNext()'>下一页</el-button>
+    <!-- <div style='margin-top:2%'><el-button class="btn" @click="gotoNext()">下一页</el-button></div> -->
     
   </div>
   <div class='footer'><eyfooter></eyfooter></div>

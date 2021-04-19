@@ -442,6 +442,7 @@ export default {
 
 .ml10 {
   margin-left: 10px;
+  width: -webkit-fill-available;
 }
 
 .mt2 {

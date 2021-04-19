@@ -180,12 +180,13 @@ el-button:focus,
 .question {
   padding: 2% 5% 2% 5%;
   font-size: 16px;
-  height: 75%;
+  height: 80%;
   width: 90%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow: auto;
+      justify-content: space-evenly;
+  /* overflow: auto; */
 }
 .assessment {
   background: url('../src/assets/opacity.png');
@@ -194,12 +195,12 @@ el-button:focus,
   background-position: center center;
   /* opacity: 50%; */
 
-  height: 93%;
+  min-height: 93%;
   display: flex;
   flex-direction: column;
   width: 90%;
   align-items: center;
-      justify-content: space-between;
-      overflow: auto;
+      /* justify-content: space-between; */
+      /* overflow: auto; */
 }
 </style>
