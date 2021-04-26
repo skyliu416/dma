@@ -12,7 +12,7 @@
           <div class="" style="width: 100%">
             <div class="marks" v-show="showResult.a">
               <span class="f36 yellow">{{ avg }}分 /</span
-              ><span class="f24 yellow">5分</span>
+              ><span class="f24 yellow">5分</span><br/>
               <div>
                 数字化成熟度处于<span class="yellow">起步阶段</span
                 ><br />建议立即着手搭建创新团队和组织机制，为企业发展提供创新响应能力和人才保障。建议能力训练课程有…

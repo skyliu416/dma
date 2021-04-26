@@ -17,6 +17,7 @@ import TalentIntro from '../components/talent/intro'
 import TalentAssessment from '../components/talent/assessment'
 import TalentResult from '../components/talent/result'
 import TalentEnd from '../components/talent/end'
+import Test from '../components/test'
 
 Vue.use(Router)
 
@@ -107,6 +108,11 @@ export default new Router({
       path: '/talent/end',
       name: 'TalentEnd',
       component: TalentEnd
+    },
+    {
+      path: '/test',
+      name: 'Test',
+      component: Test
     },
   ] ,
   mode:'history'  

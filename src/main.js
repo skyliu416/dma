@@ -5,6 +5,8 @@ import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import  API from './api/api.js'
 import '../src/assets/icon/iconfont.css';
+// import 'lib-flexible';
+import './util/flexible.js'
 
 Vue.use(ElementUI);
 Vue.config.productionTip = false
